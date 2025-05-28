@@ -28,8 +28,8 @@ const Footer = () => {
                   {/* Social Media Icons (using placeholder divs for now) */}
                   <Image src={'/assets/linkedin.svg'} alt='facebook' width={35} height={35} className='cursor-pointer' />
                   <Image src={'/assets/facebook.svg'} alt='facebook' width={35} height={35} className='cursor-pointer' />
-                  <Image src={'/assets/instagram.svg'} alt='facebook' width={35} height={35} className='cursor-pointer' />
-                  <Image src={'/assets/youtube.svg'} alt='facebook' width={35} height={35} className='cursor-pointer' />
+                  <Image src={'/assets/Instagram.svg'} alt='facebook' width={35} height={35} className='cursor-pointer' />
+                  <Image src={'/assets/Youtube.svg'} alt='facebook' width={35} height={35} className='cursor-pointer' />
 
                </div>
             </div>
