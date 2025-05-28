@@ -16,7 +16,7 @@ const Hero = () => {
          {/* Foam Overlay */}
          <Image
             src="/assets/Foam.png"
-            alt=""
+            alt="foam texture"
             fill
             className="object-cover z-10 opacity-60"
          />
