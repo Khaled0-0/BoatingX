@@ -7,3 +7,8 @@
     /* or any color */
   }
 }
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
