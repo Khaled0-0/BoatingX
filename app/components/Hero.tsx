@@ -13,7 +13,6 @@ const Hero = () => {
             priority
          />
 
-         {/* Foam Overlay */}
          <Image
             src="/assets/Foam.png"
             alt="foam texture"
