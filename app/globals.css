@@ -175,6 +175,8 @@
   object-fit: cover;
 }
 
+/* Embla Styles */
+
 .theme-light {
   --brand-primary: rgb(47, 112, 193);
   --brand-secondary: rgb(116, 97, 195);
