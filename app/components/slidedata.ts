@@ -10,7 +10,7 @@ export const SLIDE_DATA: SlideData[] = [
       details: [
          { iconSrc: '/assets/Lightning.svg', label: 'Max. engine power', value: '2 x 250 HP' },
          { iconSrc: '/assets/drop.svg', label: 'Water Capacity', value: '24 US Gal' },
-         { iconSrc: '/assets/Ruler.svg', label: 'Length Overall', value: '8.23 m' },
+         { iconSrc: '/assets/Rulericon.svg', label: 'Length Overall', value: '8.23 m' },
       ],
    },
    {
@@ -21,7 +21,7 @@ export const SLIDE_DATA: SlideData[] = [
       details: [
          { iconSrc: '/assets/Lightning.svg', label: 'Engine Type', value: 'Outboard' },
          { iconSrc: '/assets/drop.svg', label: 'Fuel Capacity', value: '50 US Gal' },
-         { iconSrc: '/assets/Ruler.svg', label: 'Beam', value: '2.5 m' },
+         { iconSrc: '/assets/Rulericon.svg', label: 'Beam', value: '2.5 m' },
       ],
    },
    {
@@ -32,7 +32,7 @@ export const SLIDE_DATA: SlideData[] = [
       details: [
          { iconSrc: '/assets/Lightning.svg', label: 'Max. engine power', value: '2 x 250 HP' },
          { iconSrc: '/assets/drop.svg', label: 'Water Capacity', value: '24 US Gal' },
-         { iconSrc: '/assets/Ruler.svg', label: 'Length Overall', value: '8.23 m' },
+         { iconSrc: '/assets/Rulericon.svg', label: 'Length Overall', value: '8.23 m' },
       ],
    },
    {
@@ -43,7 +43,7 @@ export const SLIDE_DATA: SlideData[] = [
       details: [
          { iconSrc: '/assets/Lightning.svg', label: 'Engine Type', value: 'Outboard' },
          { iconSrc: '/assets/drop.svg', label: 'Fuel Capacity', value: '50 US Gal' },
-         { iconSrc: '/assets/Ruler.svg', label: 'Beam', value: '2.5 m' },
+         { iconSrc: '/assets/Rulericon.svg', label: 'Beam', value: '2.5 m' },
       ],
    },
 ];
