@@ -1,5 +1,6 @@
 import { SlideData } from './embla/EmblaCarousel';
 
+// Define the structure for slide data
 export const SLIDE_DATA: SlideData[] = [
    {
       imageSrc: '/assets/boat1.png',
