@@ -20,7 +20,7 @@ const OurStory = () => {
             </p>
          </article>
 
-         <div className="relative w-full h-[200px] my-50 ">
+         <div className="relative h-[200px] my-50 ">
             {/* Background Image */}
             <Image
                src="/assets/frameimg.png"
@@ -32,8 +32,8 @@ const OurStory = () => {
             {/* Gradient Overlay */}
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,26,53,0)_0%,rgba(10,26,53,0.7)_100%)]"></div>
             {/* Overlay Card */}
-            <div className="absolute bottom-[-80px] left-55 shadow-2xl bg-white p-6 w-[1050px] h-96">
-               <div className='flex items-center justify-around'>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-2xl bg-white p-10  ">
+               <div className='flex items-center justify-between gap-10'>
 
                   <div className='flex flex-col items-center gap-5'>
                      <Image src={'/assets/nord.png'} alt='ourstory' width={140} height={100} />
@@ -60,7 +60,7 @@ const OurStory = () => {
             </div>
          </div>
 
-         <div className='my-15 flex flex-col items-center mr-10'>
+         <div className='my-15 flex flex-col items-center '>
             <p className='text-[#C7AB17] text-center text-sm font-normal uppercase tracking-wider'>Discover Our Models</p>
             {/* Vertical line */}
             <div className='w-[2px] h-15 bg-[#C7AB17] mt-4'></div>
