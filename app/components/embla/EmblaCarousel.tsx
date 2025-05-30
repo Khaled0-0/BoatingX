@@ -151,12 +151,12 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                                  <Image src={slide.imageSrc} alt={slide.title} width={400} height={500} />
                               </div>
                               <div className='embla__slide__header'>
-                                 <div >
+                                 <div className='flex items-center justify-between'>
                                     <h2 className='embla__slide__title'>{slide.title}</h2>
-                                    <p className='embla__slide__price'>{slide.price}</p>
+                                    <Image src={slide.logoSrc} alt={`${slide.title} logo`} width={110} height={110} />
                                  </div>
                                  <div>
-                                    <Image src={slide.logoSrc} alt={`${slide.title} logo`} width={50} height={50} />
+                                    <p className='embla__slide__price'>{slide.price}</p>
                                  </div>
                               </div>
                               <div className='embla__slide__details'>

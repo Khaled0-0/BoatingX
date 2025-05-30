@@ -257,11 +257,12 @@
   /* p-5 */
 }
 
+/* 
 .embla__slide__header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-}
+  align-items: center;
+} */
 
 .embla__slide__title {
   font-size: 1.5rem;
@@ -433,6 +434,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
