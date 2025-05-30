@@ -30,9 +30,9 @@ const Header = () => {
 
    return (
       <header
-         className={`fixed top-0 z-50 w-full flex items-center justify-between px-8 py-4 transition-all duration-500 border border-b-gray-700 ${isScrolled
-            ? 'bg-white/95 backdrop-blur-md border border-b-white'
-            : 'bg-transparent'
+         className={`fixed top-0 z-50 w-full flex items-center justify-between px-8 py-4 transition-all duration-500 border-b ${isScrolled
+            ? 'bg-white/95 backdrop-blur-md border-b-white'
+            : 'bg-transparent border-b-gray-700'
             }`}
       >
          <div>
