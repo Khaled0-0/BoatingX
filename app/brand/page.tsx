@@ -1,10 +1,11 @@
 import React from 'react'
+import Discover from '../components/Discover'
 
 const BrandModels = () => {
    return (
-      <div>
-         brand models page
-      </div>
+      <section>
+         <Discover />
+      </section>
    )
 }
 

@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 const OurStory = () => {
    return (
-      <section className=''>
+      <section>
 
          <article className='flex flex-col items-center gap-5 my-10'>
             <h2 className='text-[#C7AB17] text-center text-4xl font-normal w-[499px]'>

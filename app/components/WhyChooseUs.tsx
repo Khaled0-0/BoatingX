@@ -4,7 +4,6 @@ import { whyChooseUsData } from './data'
 
 
 
-
 const WhyChooseUs = () => {
    return (
       <section className=' my-20'>
@@ -19,6 +18,7 @@ const WhyChooseUs = () => {
          </div>
 
          <div className='flex mt-20 justify-evenly'>
+            {/* the data in the data.ts file will be used here */}
             {whyChooseUsData.map((item) => (
                <div key={item.id} className='p-4 flex flex-col items-center max-w-90 shadow-sm gap-3'>
                   <Image src={item.src} alt={item.alt} width={48} height={48} />

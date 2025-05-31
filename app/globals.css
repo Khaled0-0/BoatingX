@@ -439,3 +439,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* brands styles  */
+
+.glass-style {
+  @apply rounded-[4px] border border-[#EAEAEA4D] bg-[#49494933] backdrop-blur-[16px] w-[600px] h-[475px] p-8;
+}
+
+.button-style {
+  @apply py-4 px-12 mt-8 text-center text-lg font-bold text-white uppercase border border-white w-full cursor-pointer hover:border-[#C7AB17] hover:text-[#C7AB17] transform duration-300 ease-in-out hover:shadow-sm hover:shadow-[#C7AB17]
+}

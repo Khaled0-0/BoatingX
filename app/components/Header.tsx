@@ -32,7 +32,7 @@ const Header = () => {
       <header
          className={`fixed top-0 z-50 w-full flex items-center justify-between px-8 py-4 transition-all duration-500 border-b ${isScrolled
             ? 'bg-white/95 backdrop-blur-md border-b-white'
-            : 'bg-transparent border-b-gray-700'
+            : 'bg-transparent border-b-gray-100/10'
             }`}
       >
          <div>
@@ -48,24 +48,29 @@ const Header = () => {
             </Link>
          </div>
 
-         <nav className='flex items-center gap-8 text-sm font-medium tracking-wider'>
-            {links.map(link => (
-               <Link
-                  key={link.name}
-                  href={link.path}
-                  className={`transition-all duration-300 hover:opacity-80 ${pathname === link.path
-                     ? isScrolled
-                        ? 'text-black border-b-2 border-black'
-                        : 'text-white border-b-2 border-white'
-                     : isScrolled
-                        ? 'text-gray-700 hover:text-black'
-                        : 'text-white hover:text-gray-200'
-                     }`}
-               >
-                  {link.name}
-               </Link>
-            ))}
+         <nav className="flex items-center gap-8 text-sm font-medium tracking-wider">
+            {links.map(link => {
+               const isActive = pathname === link.path;
+               const baseColor = isScrolled ? 'black' : 'white';
+               const hoverColor = isScrolled ? 'hover:text-black' : 'hover:text-gray-200';
+               const inactiveColor = isScrolled ? 'text-gray-700' : 'text-white';
+
+               return (
+                  <Link
+                     key={link.name}
+                     href={link.path}
+                     className={`relative group transition-all duration-300 ${isActive ? `text-${baseColor}` : inactiveColor} ${hoverColor}`}
+                  >
+                     {link.name}
+                     <span
+                        className={`absolute left-0 -bottom-1 h-[2px] w-full transform transition-all duration-300 origin-left scale-x-0 bg-${baseColor} 
+                        ${isActive ? 'scale-x-100' : 'group-hover:scale-x-100'}`}
+                     ></span>
+                  </Link>
+               );
+            })}
          </nav>
+
 
          <div>
             <Link href='/contact-us'>
