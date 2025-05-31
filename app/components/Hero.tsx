@@ -12,7 +12,7 @@ const Hero = () => {
             className="object-cover z-0"
             priority
          />
-
+         {/* the foam */}
          <Image
             src="/assets/Foam.png"
             alt="foam texture"

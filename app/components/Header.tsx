@@ -59,13 +59,15 @@ const Header = () => {
                   <Link
                      key={link.name}
                      href={link.path}
-                     className={`relative group transition-all duration-300 ${isActive ? `text-${baseColor}` : inactiveColor} ${hoverColor}`}
+                     className={`relative group transition-all duration-300 ${isActive ?
+                        `text-${baseColor}` : inactiveColor} border-b-black ${hoverColor}`}
                   >
                      {link.name}
                      <span
                         className={`absolute left-0 -bottom-1 h-[2px] w-full transform transition-all duration-300 origin-left scale-x-0 bg-${baseColor} 
-                        ${isActive ? 'scale-x-100' : 'group-hover:scale-x-100'}`}
-                     ></span>
+                        ${isActive ? 'scale-x-100 ' : 'group-hover:scale-x-100'}`}
+                     >
+                     </span>
                   </Link>
                );
             })}

@@ -36,7 +36,7 @@
   max-width: 100%;
   margin: auto;
   --slide-height: 19rem;
-  --slide-spacing: 1rem;
+  /* --slide-spacing: 1rem; */
   --slide-size: 40%;
 }
 
@@ -163,12 +163,19 @@
   /* overflow: hidden; */
 }
 
+.card-style {
+  border-radius: 1.8rem;
+  height: 100%;
+  /* overflow: hidden; */
+}
+
 .embla__parallax__layer {
   position: relative;
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
+  transform: translateZ(0);
 }
 
 .embla__parallax__img {
@@ -447,5 +454,5 @@
 }
 
 .button-style {
-  @apply py-4 px-12 mt-8 text-center text-lg font-bold text-white uppercase border border-white w-full cursor-pointer hover:border-[#C7AB17] hover:text-[#C7AB17] transform duration-300 ease-in-out hover:shadow-sm hover:shadow-[#C7AB17]
+  @apply py-3 mt-8 text-center text-lg font-bold text-white uppercase border border-white w-full cursor-pointer hover:border-[#C7AB17] hover:text-[#C7AB17] transform duration-300 ease-in-out hover:shadow-sm hover:shadow-[#C7AB17]
 }
