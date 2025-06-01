@@ -1,13 +1,15 @@
 import React from 'react'
 import Category from '../components/Category'
 
-const ContactUs = () => {
+
+
+
+const Catalog = () => {
    return (
-      <div>
-         Contact us page
+      <section>
          <Category />
-      </div>
+      </section>
    )
 }
 
-export default ContactUs
+export default Catalog

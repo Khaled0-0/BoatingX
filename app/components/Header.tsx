@@ -9,6 +9,7 @@ const links = [
    { name: 'HOME', path: '/' },
    { name: 'BRANDS & MODELS', path: '/brand' },
    { name: 'ABOUT', path: '/about' },
+   { name: 'CATEGORY', path: '/catalog' },
 ]
 
 const Header = () => {
@@ -24,22 +25,30 @@ const Header = () => {
          setIsScrolled(scrollPosition > heroHeight * 0.8) // Trigger at 80% of hero height
       }
 
-      window.addEventListener('scroll', handleScroll)
+      // Only attach scroll listener if not on catalog or about pages
+      if (pathname !== '/catalog' && pathname !== '/contact-us') {
+         window.addEventListener('scroll', handleScroll)
+      }
       return () => window.removeEventListener('scroll', handleScroll)
-   }, [])
+   }, [pathname]) // Add pathname to dependencies to re-run effect on path change
+
+   // Determine if we should force the scrolled style
+   const forceScrolled = pathname === '/catalog' || pathname === '/contact-us';
 
    return (
       <header
-         className={`fixed top-0 z-50 w-full flex items-center justify-between px-8 py-4 transition-all duration-500 border-b ${isScrolled
-            ? 'bg-white/95 backdrop-blur-md border-b-white'
-            : 'bg-transparent border-b-gray-100/10'
+         className={`fixed top-0 z-50 w-full flex items-center justify-between px-8 py-4 transition-all duration-500 border-b ${forceScrolled
+            ? 'bg-white/95 backdrop-blur-md border-b-gray-200'
+            : isScrolled
+               ? 'bg-white/95 backdrop-blur-md border-b-white'
+               : 'bg-transparent border-b-gray-100/10'
             }`}
       >
          <div>
             <Link href='/'>
                <Image
                   className='mt-1 '
-                  src={isScrolled ? '/assets/black-logo.svg' : '/assets/white-logo.svg'}
+                  src={forceScrolled || isScrolled ? '/assets/black-logo.svg' : '/assets/white-logo.svg'}
                   alt='logo'
                   width={160}
                   height={50}
@@ -51,33 +60,35 @@ const Header = () => {
          <nav className="flex items-center gap-8 text-sm font-medium tracking-wider">
             {links.map(link => {
                const isActive = pathname === link.path;
-               const baseColor = isScrolled ? 'black' : 'white';
-               const hoverColor = isScrolled ? 'hover:text-black' : 'hover:text-gray-200';
-               const inactiveColor = isScrolled ? 'text-gray-700' : 'text-white';
+               const baseColor = forceScrolled || isScrolled ? 'black' : 'white';
+               const hoverColor = (forceScrolled || isScrolled) ? 'hover:text-black' : 'hover:text-gray-200';
+               const inactiveColor = (forceScrolled || isScrolled) ? 'text-gray-700' : 'text-white';
 
                return (
                   <Link
                      key={link.name}
                      href={link.path}
-                     className={`relative group transition-all duration-300 ${isActive ?
-                        `text-${baseColor}` : inactiveColor} border-b-black ${hoverColor}`}
+                     className={`relative group transition-all duration-300 
+                     ${isActive ? (baseColor === 'black' ? 'text-black' : 'text-white') : inactiveColor} 
+                     ${hoverColor}`}
                   >
                      {link.name}
                      <span
-                        className={`absolute left-0 -bottom-1 h-[2px] w-full transform transition-all duration-300 origin-left scale-x-0 bg-${baseColor} 
-                        ${isActive ? 'scale-x-100 ' : 'group-hover:scale-x-100'}`}
-                     >
-                     </span>
+                        className={`absolute left-0 -bottom-1 h-[2px] w-full transform transition-all duration-300 origin-left scale-x-0 
+                     ${baseColor === 'black' ? 'bg-black' : 'bg-white'} 
+                        ${isActive ? 'scale-x-100' : 'group-hover:scale-x-100'}`}
+                     />
                   </Link>
                );
             })}
          </nav>
 
 
+
          <div>
             <Link href='/contact-us'>
                <button
-                  className={`px-6 py-2 border cursor-pointer transition-all duration-300 text-lg font-medium tracking-wide ${isScrolled
+                  className={`px-6 py-2 border cursor-pointer transition-all duration-300 text-lg font-medium tracking-wide ${forceScrolled || isScrolled
                      ? 'border-black text-black hover:bg-black hover:text-white'
                      : 'border-white text-white hover:bg-white hover:text-black'
                      }`}
