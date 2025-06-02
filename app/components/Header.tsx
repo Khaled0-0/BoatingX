@@ -25,7 +25,7 @@ const Header = () => {
          setIsScrolled(scrollPosition > heroHeight * 0.8) // Trigger at 80% of hero height
       }
 
-      // Only attach scroll listener if not on catalog or about pages
+      // Only attach scroll listener if not on catalog or contact-us pages
       if (pathname !== '/catalog' && pathname !== '/contact-us') {
          window.addEventListener('scroll', handleScroll)
       }
