@@ -8,7 +8,7 @@ import {
    SelectLabel,
    SelectTrigger,
    SelectValue,
-} from '@/app/components/ui/select';
+} from '@/app/components/ui/searchselect';
 
 type Option = { label: string; value: string };
 
@@ -18,6 +18,7 @@ interface SelectableDropdownProps {
    value: string;
    onChange: (value: string) => void;
    options: Option[];
+   className?: string;
 }
 
 export const SelectableDropdown = ({
@@ -26,10 +27,11 @@ export const SelectableDropdown = ({
    value,
    onChange,
    options,
+   className,
 }: SelectableDropdownProps) => {
    return (
       <Select value={value} onValueChange={onChange}>
-         <SelectTrigger className="w-[130px]">
+         <SelectTrigger className={`w-[130px] ${className}`}>
             <SelectValue placeholder={placeholder} />
          </SelectTrigger>
          <SelectContent>

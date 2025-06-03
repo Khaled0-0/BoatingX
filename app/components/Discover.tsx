@@ -19,7 +19,7 @@ const Discover = () => {
             src="/assets/Foam.png"
             alt="foam texture"
             fill
-            className="object-cover  "
+            className="object-cover "
          />
 
          <div className='text-center not-italic text-white absolute pt-40 w-full'>

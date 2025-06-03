@@ -8,7 +8,7 @@ import React, { useState, useEffect } from 'react'
 const links = [
    { name: 'HOME', path: '/' },
    { name: 'BRANDS & MODELS', path: '/brand' },
-   { name: 'ABOUT', path: '/about' },
+   // { name: 'ABOUT', path: '/about' },
    { name: 'CATEGORY', path: '/catalog' },
 ]
 

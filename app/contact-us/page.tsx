@@ -1,8 +1,12 @@
 import React from 'react'
+import { FormContact } from '../components/FormContact'
+import AccordionFAQ from '../components/AccordionFAQ'
 
 const ContactUs = () => {
    return (
-      <section>
+      <section className='mt-28 mx-40'>
+         <FormContact />
+         <AccordionFAQ />
       </section>
    )
 }

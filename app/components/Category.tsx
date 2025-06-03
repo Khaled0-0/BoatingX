@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import Input from './ui/Input';
+import SearchInput from './ui/SearchInput';
 import Image from 'next/image';
 import { SelectableDropdown } from './ui/SelectableDropdown';
 
@@ -51,7 +51,7 @@ const Category = () => {
    return (
       <section>
          <div className='pt-25 px-30 flex flex-col gap-5'>
-            <Input />
+            <SearchInput />
          </div>
 
          <div className='pt-5 px-30 flex gap-3'>
@@ -99,7 +99,7 @@ const Category = () => {
                val ? (
                   <div
                      key={key}
-                     className='border-gray-200 border px-3  text- flex gap-2 items-center focus:outline-none focus:ring-2 focus:ring-[#C7AB17]'
+                     className='border-gray-200 border px-3  text- flex gap-2 items-center focus:outline-none focus:ring-2 focus:ring-gray-200/50'
                      tabIndex={0}
                      onKeyDown={(e) => {
                         if (e.key === 'Backspace' || e.key === 'Delete') {
@@ -110,7 +110,7 @@ const Category = () => {
                      <p className='text-lg font-medium'>{val}</p>
                      <Image
                         onClick={() => handleClear(key as keyof typeof selectedValues)}
-                        className='cursor-pointer hover:bg-[#C7AB17] hover:rounded-2xl '
+                        className='cursor-pointer hover:bg-red-400/70 hover:rounded-2xl '
                         src='/assets/close.svg'
                         alt='close'
                         width={14}
