@@ -1,5 +1,8 @@
 "use client"
 
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
+
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
@@ -66,7 +69,7 @@ export function FormContact() {
             </p>
          </header>
 
-         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 mt-10 ">
+         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 mt-10 mb-40 ">
 
             <div className="grid grid-cols-2 gap-5">
                {/* Title */}
@@ -124,6 +127,7 @@ export function FormContact() {
 
             {/* Phone Number + Preferred Contact */}
             <div className="grid grid-cols-2 gap-5">
+
                <FormField
                   control={form.control}
                   name="phoneNumber"
@@ -131,12 +135,25 @@ export function FormContact() {
                      <FormItem>
                         <FormLabel>Phone Number</FormLabel>
                         <FormControl>
-                           <Input type="tel" className="w-full" placeholder="Phone Number" {...field} />
+                           <PhoneInput
+                              country={'us'}
+                              value={field.value}
+                              onChange={(phone) => field.onChange(phone)}
+                              inputClass="!w-full !h-10 !text-sm !rounded-none"
+                              buttonClass="!bg-[#6C757D1A] !rounded-none"
+                              containerClass="!w-full !h-10 !text-sm !rounded-none"
+                              inputProps={{
+                                 name: 'phoneNumber',
+                                 required: false,
+                                 autoFocus: false,
+                              }}
+                           />
                         </FormControl>
                         <FormMessage />
                      </FormItem>
                   )}
                />
+
                <FormField
                   control={form.control}
                   name="preferredContact"
@@ -177,7 +194,7 @@ export function FormContact() {
                )}
             />
 
-            <Button type="submit" className="w-full">Submit</Button>
+            <Button type="submit" className="w-full h-15 rounded-none bg-[#C7AB17] text-white text-xl font-bold cursor-pointer hover:bg-[#C7AB17]/80 ">Submit</Button>
          </form>
       </Form>
    )
