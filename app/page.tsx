@@ -9,13 +9,13 @@ import AccordionFAQ from "./components/AccordionFAQ";
 
 export default function Home() {
   return (
-    <main>
+    <section>
       <Hero />
       <OurStory />
       <Products />
       <WhyChooseUs />
       <WhoWeAre />
       <AccordionFAQ />
-    </main>
+    </section>
   );
 }

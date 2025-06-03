@@ -1,12 +1,9 @@
 import React from 'react'
-import Category from '../components/Category'
 
 const ContactUs = () => {
    return (
-      <div>
-         Contact us page
-         <Category />
-      </div>
+      <section>
+      </section>
    )
 }
 

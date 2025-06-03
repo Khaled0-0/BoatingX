@@ -1,10 +1,13 @@
 import React from 'react'
+import AboutHero from '../components/AboutHero'
+import TheStory from '../components/TheStory'
 
 const About = () => {
    return (
-      <div>
-         <h1>About</h1>
-      </div>
+      <section>
+         <AboutHero />
+         <TheStory />
+      </section>
    )
 }
 

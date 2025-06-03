@@ -14,6 +14,14 @@ const Discover = () => {
             priority
          />
 
+         {/* the foam */}
+         <Image
+            src="/assets/Foam.png"
+            alt="foam texture"
+            fill
+            className="object-cover  "
+         />
+
          <div className='text-center not-italic text-white absolute pt-40 w-full'>
             <h1 className='text-5xl font-medium'>
                Discover Two Amazing Yacht Experiences
