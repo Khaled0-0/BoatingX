@@ -66,7 +66,8 @@ export const PrevButton: React.FC<PropType> = (props) => {
          type="button"
          {...restProps}
       >
-         <Image src={'/assets/prev.svg'} alt='prev' width={40} height={30} className='mr-5' />
+         <Image src={'/assets/prev.svg'} alt='prev' width={40} height={30}
+            className=' mr-1 md:mr-5' />
          {children}
       </button>
    )
@@ -81,7 +82,8 @@ export const NextButton: React.FC<PropType> = (props) => {
          type="button"
          {...restProps}
       >
-         <Image src={'/assets/next.svg'} alt='next' width={40} height={30} className='ml-5' />
+         <Image src={'/assets/next.svg'} alt='next'
+            width={40} height={30} className=' ml-1 md:ml-5' />
 
          {children}
       </button>

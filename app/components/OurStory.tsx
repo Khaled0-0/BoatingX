@@ -9,13 +9,14 @@ const OurStory = () => {
    return (
       <section className='mb-30 md:mb-0'>
 
-         <article className='flex flex-col items-center gap-5 my-10'>
-            <h2 className='text-[#C7AB17] text-center text-xl sm:text-2xl md:text-4xl font-semibold
-               md:w-[499px] px-8 md:px-0 '>
+         <article className='flex flex-col items-center gap-5 my-10  px-2 md:px-0 '>
+            <h2 className='text-[#C7AB17] text-center text-2xl sm:text-2xl md:text-4xl font-semibold
+               '>
                Egypt&apos;s Premier Gateway to
+               <br className='hidden md:block' />
                Luxury Yachting Brands
             </h2>
-            <p className='text-[#6C757D] text-lg font-normal  text-center md:w-[600px] w-[340px] px-3 leading-6'>
+            <p className='text-[#6C757D] text-base md:text-2xl md:w-[90%]  font-normal  text-center md:leading-8 leading-6 lg:w-[70%] lg:px-20 '>
                As an authorized dealer, we proudly represent some of the most prestigious yacht brands in the world, offering our clients unparalleled access to luxury vessels that embody elegance,
                performance, and innovation.
             </p>

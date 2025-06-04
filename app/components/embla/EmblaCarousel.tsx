@@ -119,9 +119,9 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
    return (
       <div className="embla">
 
-         <div className="embla__controls">
+         <div className="embla__controls ">
             <div className="embla__buttons ">
-               <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+               <PrevButton className='' onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
             </div>
 
             <div className="embla__dots">
@@ -143,17 +143,19 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
          <div className="embla__viewport" ref={emblaRef} >
             <div className="embla__container">
                {slides.map((slide, index) => (
-                  <div className="embla__slide" key={index}>
+                  <div className="embla__slide " key={index}>
                      <div className="embla__parallax">
                         <div className="embla__parallax__layer">
-                           <div className='embla__slide__card'>
+                           <div className='embla__slide__card '>
                               <div>
-                                 <Image src={slide.imageSrc} alt={slide.title} width={400} height={500} />
+                                 <Image src={slide.imageSrc} alt={slide.title}
+                                    width={400} height={500} />
                               </div>
                               <div className='embla__slide__header'>
-                                 <div className='flex items-center justify-between'>
+                                 <div className='flex items-center justify-between '>
                                     <h2 className='embla__slide__title'>{slide.title}</h2>
-                                    <Image src={slide.logoSrc} alt={`${slide.title} logo`} width={110} height={110} />
+                                    <Image src={slide.logoSrc} alt={`${slide.title} logo`}
+                                       width={110} height={110} />
                                  </div>
                                  <div>
                                     <p className='embla__slide__price'>{slide.price}</p>
