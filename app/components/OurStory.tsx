@@ -11,7 +11,7 @@ const OurStory = () => {
 
          <article className='flex flex-col items-center gap-5 my-10'>
             <h2 className='text-[#C7AB17] text-center text-xl sm:text-2xl md:text-4xl font-semibold
-               md:w-[499px] '>
+               md:w-[499px] px-8 md:px-0 '>
                Egypt&apos;s Premier Gateway to
                Luxury Yachting Brands
             </h2>
