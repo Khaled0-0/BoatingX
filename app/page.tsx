@@ -9,7 +9,7 @@ import AccordionFAQ from "./components/AccordionFAQ";
 
 export default function Home() {
   return (
-    <section>
+    <section className="overflow-clip">
       <Hero />
       <OurStory />
       <Products />

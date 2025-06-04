@@ -5,6 +5,16 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useState, useEffect } from 'react'
 
+import {
+   Drawer,
+   DrawerClose,
+   DrawerContent,
+   DrawerFooter,
+   DrawerHeader,
+   DrawerTitle,
+   DrawerTrigger,
+} from "@/app/components/hooks/drawer"
+
 const links = [
    { name: 'HOME', path: '/' },
    { name: 'BRANDS & MODELS', path: '/brand' },
@@ -37,7 +47,7 @@ const Header = () => {
 
    return (
       <header
-         className={`fixed top-0 z-50 w-full flex items-center justify-between px-8 py-4 transition-all duration-500 border-b ${forceScrolled
+         className={`fixed top-0 z-50 w-full flex items-center justify-between px-3 md:px-8 py-4 transition-all duration-500 border-b ${forceScrolled
             ? 'bg-white/95 backdrop-blur-md border-b-gray-200'
             : isScrolled
                ? 'bg-white/95 backdrop-blur-md border-b-white'
@@ -57,7 +67,8 @@ const Header = () => {
             </Link>
          </div>
 
-         <nav className="flex items-center gap-8 text-sm font-medium tracking-wider">
+         {/* Desktop Navigation */}
+         <nav className="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wider">
             {links.map(link => {
                const isActive = pathname === link.path;
                const baseColor = forceScrolled || isScrolled ? 'black' : 'white';
@@ -83,9 +94,8 @@ const Header = () => {
             })}
          </nav>
 
-
-
-         <div>
+         {/* Desktop Contact Button */}
+         <div className="hidden lg:block">
             <Link href='/contact-us'>
                <button
                   className={`px-6 py-2 border cursor-pointer transition-all duration-300 text-lg font-medium tracking-wide ${forceScrolled || isScrolled
@@ -96,6 +106,70 @@ const Header = () => {
                   Contact Us
                </button>
             </Link>
+         </div>
+
+         {/* Mobile/Tablet Drawer */}
+         <div className="lg:hidden">
+            <Drawer direction="right">
+               <DrawerTrigger>
+                  {/* Hamburger Icon (replace with a proper icon) */}
+                  <svg xmlns="http://www.w3.org/2000/svg" className={`h-7 w-7 cursor-pointer ${forceScrolled || isScrolled ? 'text-black' : 'text-white'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+               </DrawerTrigger>
+               <DrawerContent>
+                  <DrawerHeader>
+                     <DrawerTitle></DrawerTitle>
+                     {/* Close button */}
+                     <DrawerClose asChild>
+                        <div className="absolute right-4 top-4">
+                           <Image
+                              src="/assets/close.svg"
+                              alt="Close"
+                              width={24}
+                              height={24}
+                              className="cursor-pointer"
+                           />
+                        </div>
+                     </DrawerClose>
+                  </DrawerHeader>
+                  <div className="flex flex-col items-center gap-4 py-4">
+                     {links.map(link => {
+                        const isActive = pathname === link.path;
+                        const colorClass = forceScrolled || isScrolled ? 'text-black' : 'text-gray-700';
+
+                        return (
+                           <DrawerClose key={link.name} asChild>
+                              <Link
+                                 key={link.name}
+                                 href={link.path}
+                                 className={`text-lg font-medium ${isActive ? 'font-bold' : ''} ${colorClass}`}
+                              >
+                                 {link.name}
+                              </Link>
+                           </DrawerClose>
+                        );
+                     })}
+                     <DrawerClose asChild>
+                        <Link href='/contact-us'>
+                           <button
+                              className={`mt-4 px-6 py-2 border cursor-pointer transition-all duration-300 text-lg font-medium tracking-wide ${forceScrolled || isScrolled
+                                 ? 'border-black text-black hover:bg-black hover:text-white'
+                                 : 'border-black text-black hover:bg-black hover:text-white'
+                                 }`}
+                           >
+                              Contact Us
+                           </button>
+                        </Link>
+                     </DrawerClose>
+                  </div>
+                  <DrawerFooter>
+                     <DrawerClose>
+                        {/* Optional: Add a close button here if needed */}
+                     </DrawerClose>
+                  </DrawerFooter>
+               </DrawerContent>
+            </Drawer>
          </div>
       </header>
    )

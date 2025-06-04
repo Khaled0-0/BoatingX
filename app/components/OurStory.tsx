@@ -7,56 +7,59 @@ import Image from 'next/image'
 
 const OurStory = () => {
    return (
-      <section>
+      <section className='mb-30 md:mb-0'>
 
          <article className='flex flex-col items-center gap-5 my-10'>
-            <h2 className='text-[#C7AB17] text-center text-4xl font-normal w-[499px]'>
+            <h2 className='text-[#C7AB17] text-center text-xl sm:text-2xl md:text-4xl font-semibold
+               md:w-[499px] '>
                Egypt&apos;s Premier Gateway to
                Luxury Yachting Brands
             </h2>
-            <p className='text-[#6C757D] text-lg font-normal  text-center w-[650px] leading-6'>
+            <p className='text-[#6C757D] text-lg font-normal  text-center md:w-[600px] w-[340px] px-3 leading-6'>
                As an authorized dealer, we proudly represent some of the most prestigious yacht brands in the world, offering our clients unparalleled access to luxury vessels that embody elegance,
                performance, and innovation.
             </p>
          </article>
 
-         <div className="relative h-[200px] my-50 ">
+         <div className="relative h-[200px] my-50 flex  ">
             {/* Background Image */}
             <Image
                src="/assets/frameimg.png"
                alt="Background"
-               className="w-full h-full object-cover bg-[]"
+               className="w-full h-full object-cover hidden md:block"
                width={400}
                height={100}
             />
             {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,26,53,0)_0%,rgba(10,26,53,0.7)_100%)]"></div>
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,26,53,0)_0%,rgba(10,26,53,0.7)_100%)] "></div>
             {/* Overlay Card */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-2xl bg-white p-10  ">
-               <div className='flex items-center justify-between gap-10'>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:shadow-2xl shadow-none bg-white p-10 my-30 md:my-0  ">
 
-                  <div className='flex flex-col items-center gap-5'>
+               <div className=' flex flex-col md:flex-row md:items-start  items-center justify-between gap-10'>
+
+                  <div className='flex flex-col items-center gap-5 border-b border-gray-300 md:border-none'>
                      <Image src={'/assets/nord.png'} alt='ourstory' width={140} height={100} />
                      <p className='text-[#6C757D] text-lg font-normal  text-center w-[350px] leading-6'>
                         British luxury since 1968, pioneers of the 100 Yacht series, merging performance with craftsmanship.
                      </p>
-                     <button className="px-8 py-3 border-2 border-[#C7AB17] text-[#C7AB17]  hover:text-black hover:border-black transition-all duration-300 text-xl font-medium tracking-wider min-w-[200px] cursor-pointer">
+                     <button className="px-8 py-3 border-2 border-[#C7AB17] text-[#C7AB17]  hover:text-black hover:border-black transition-all duration-300 text-xl font-medium tracking-wider min-w-[200px] cursor-pointer mb-20 md:mb-0 ">
                         Book a Consultation
                      </button>
                   </div>
                   {/* border line */}
-                  <div className='border-r border-gray-300 h-[200px]'></div>
+                  <div className='hidden md:block border-r border-gray-300 h-[200px] '></div>
                   {/* 2nd card */}
-                  <div className='flex flex-col items-center gap-5'>
+                  <div className='flex flex-col items-center gap-5 mt-8 md:mt-2.5'>
                      <Image src={'/assets/image15.png'} alt='ourstory' width={400} height={100} />
                      <p className='text-[#6C757D] text-lg font-normal  text-center w-[350px] leading-6'>
                         Italian excellence since 1969. Creators of the award-winning Magellano line, renowned for innovative naval architecture.
                      </p>
-                     <button className="px-8 py-3 border-2 border-[#C7AB17] text-[#C7AB17]  hover:text-black hover:border-black transition-all duration-300 text-xl font-medium tracking-wider min-w-[200px] cursor-pointer  ">
+                     <button className="px-8 py-3 border-2 border-[#C7AB17] text-[#C7AB17]  hover:text-black hover:border-black transition-all duration-300 text-xl font-medium tracking-wider min-w-[200px] cursor-pointer   ">
                         Book a Consultation
                      </button>
                   </div>
                </div>
+
             </div>
          </div>
 
