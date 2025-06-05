@@ -3,25 +3,63 @@ import Image from 'next/image'
 
 const WhoWeAre = () => {
    return (
-      <section className='mt-20 relative h-[900px] overflow-clip'>
-         <div>
-            <Image src={"/assets/wb.png"} alt={"background"} layout='fill' objectFit='cover' className=' z-0' />
+      <section className='mt-20 relative md:h-[900px] h-[650px] sm:h-[700px] xs:h-[550px] '>
+         {/* Container for Background Image */}
+         <div className="absolute inset-0 w-full h-full">
+            {/* Desktop - Full Image */}
+            <div className="hidden xs:hidden sm:block md:block lg:block">
+               <Image
+                  src={"/assets/wb.png"}
+                  alt={"background"}
+                  layout='fill'
+                  objectFit='cover'
+                  className="object-center"
+               />
+            </div>
+
+            {/* Mobile - Right Half of Image */}
+            <div className="block xs:block sm:hidden overflow-hidden h-full">
+               <div className="w-[200%] h-full ml-[-50%]">
+                  <Image
+                     src={"/assets/wb.png"}
+                     alt={"background mobile"}
+                     layout='fill'
+                     objectFit='cover'
+                     className="object-right"
+                  />
+               </div>
+            </div>
          </div>
 
-         <div className='absolute z-10 left-1/12 top-1/6 w-4/5 h-[75%] flex flex-col items-start justify-between '>
-            <div className=''>
-               <Image src={'/assets/white-logo.svg'} alt='logo' width={150} height={150} />
+         {/* Overlay Foam Texture */}
+         <Image
+            src="/assets/Foam.png"
+            alt="foam texture"
+            fill
+            className="object-cover z-10"
+         />
+
+         {/* Content */}
+         <div className='absolute z-10 left-[8%] top-[10%] w-[85%] h-[75%]  flex flex-col items-start md:justify-between'>
+            <div>
+               <Image src={'/assets/white-logo.svg'} alt='logo' width={130} height={100} className='xs:w-[60px] xs:h-[60px]' />
             </div>
-            <div className='flex justify-between items-end w-full'>
-               <div>
-                  <h2 className='text-[#FFF] text-center  text-6xl font-normal'>Who We Are</h2>
-               </div>
-               <div className='max-w-2/4 flex flex-col gap-7'>
-                  <p className='text-[#FFF] text-lg font-normal max-w-4/5 leading-7'>
-                     Founded by Mark Richard in 1995, Palm Beach Motor Yachts is a World celebrated, award-winning boat builder of downeast- style luxury motor yachts. We proudly offer an impressive portfolio of 34 model variations, ranging in size from 42 feet to 107 feet across our Classic, GT, and GTRS model ranges.
-                     Each of our luxury motor yacht models is frawlasley crafted from the ground up, delivering performance, impressive range, and supreme fuel efficiency for a yachting experience unlike any other. Our meticulous dedication to quality reflects our unwavering commitment to safeguarding your investment in our motor yachts, ensuring that every moment of your yachting journey is truly exceptional.
+
+            <div className='flex flex-col md:flex-row md:items-end md:justify-between w-full gap-6 
+            '>
+               <h2 className='text-white text-4xl md:text-6xl font-normal text-start md:text-center  mt-25 md:mt-0'>
+                  Who We Are
+               </h2>
+
+               <div className='md:max-w-[50%] text-left flex flex-col gap-6'>
+                  <p className='text-white text-ld md:text-xl font-normal leading-6 md:leading-7 '>
+                     Founded by Mark Richard in 1995, Palm Beach Motor Yachts is a world-celebrated, award-winning boat builder of Downeast-style luxury motor yachts. We proudly offer 34 model variations from 42 to 107 feet across our Classic, GT, and GTRS ranges.
+                     Each luxury yacht is crafted for performance, range, and fuel efficiency. Our dedication to quality ensures your investment provides a truly exceptional yachting experience.
                   </p>
-                  <button className='text-[#FFF] border border-[#FFF] text-center text-lg font-normal py-1 px-2  cursor-pointer max-w-3/12 '>ABOUT US</button>
+
+                  <button className='text-white border border-white text-sm md:text-lg font-normal py-2 px-4 max-w-[150px]'>
+                     ABOUT US
+                  </button>
                </div>
             </div>
          </div>

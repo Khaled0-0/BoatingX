@@ -34,9 +34,9 @@ const OurStory = () => {
             {/* Gradient Overlay */}
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,26,53,0)_0%,rgba(10,26,53,0.7)_100%)] "></div>
             {/* Overlay Card */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:shadow-2xl shadow-none bg-white p-10 my-30 md:my-0  ">
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:shadow-md shadow-none bg-white p-10 my-30 md:my-0 ">
 
-               <div className=' flex flex-col md:flex-row md:items-start  items-center justify-between gap-10'>
+               <div className=' flex flex-col md:flex-row md:items-start items-center justify-between gap-8'>
 
                   <div className='flex flex-col items-center gap-5 border-b border-gray-300 md:border-none'>
                      <Image src={'/assets/nord.png'} alt='ourstory' width={140} height={100} />
@@ -48,7 +48,7 @@ const OurStory = () => {
                      </button>
                   </div>
                   {/* border line */}
-                  <div className='hidden md:block border-r border-gray-300 h-[200px] '></div>
+                  <div className='hidden md:block border-r border-gray-300 h-[200px] mt-10 '></div>
                   {/* 2nd card */}
                   <div className='flex flex-col items-center gap-5 mt-8 md:mt-2.5'>
                      <Image src={'/assets/image15.png'} alt='ourstory' width={400} height={100} />
