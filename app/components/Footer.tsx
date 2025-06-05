@@ -13,9 +13,9 @@ const Footer = () => {
             fill
          />
 
-         <div className='container mx-auto px-4 flex items-start justify-between  '>
+         <div className='container mx-auto px-4 flex flex-col items-center space-y-8 md:flex-row md:items-start md:justify-between md:space-y-0 '>
             {/* Left Section: Logo, Description, Social Media */}
-            <div className=' max-w-65'>
+            <div className=' md:max-w-65 mb-0 md:mb-5'>
 
                <Image src={'/assets/white-logo.svg'} alt='logo' width={120} height={120} />
                <p className='text-gray-400 my-4'>
@@ -24,7 +24,7 @@ const Footer = () => {
                   financial goals, all in one place!
                </p>
 
-               <div className='flex space-x-4'>
+               <div className='md:flex space-x-4 hidden'>
                   {/* Social Media Icons (using placeholder divs for now) */}
                   <Image src={'/assets/linkedin.svg'} alt='facebook' width={35} height={35} className='cursor-pointer' />
                   <Image src={'/assets/facebook.svg'} alt='facebook' width={35} height={35} className='cursor-pointer' />
@@ -35,7 +35,7 @@ const Footer = () => {
             </div>
 
             {/* Middle Sections: Link, Services */}
-            <div className='flex gap-20'>
+            <div className='flex flex-col w-full gap-4 md:flex-row   md:justify-evenly md:gap-20'>
 
                <div>
                   <h3 className='font-bold mb-4'>Link</h3>
@@ -65,11 +65,20 @@ const Footer = () => {
                   </ul>
                </div>
 
+               <div className='md:hidden space-x-4 flex'>
+                  {/* Social Media Icons (using placeholder divs for now) */}
+                  <Image src={'/assets/linkedin.svg'} alt='facebook' width={35} height={35} className='cursor-pointer' />
+                  <Image src={'/assets/facebook.svg'} alt='facebook' width={35} height={35} className='cursor-pointer' />
+                  <Image src={'/assets/Instagram.svg'} alt='facebook' width={35} height={35} className='cursor-pointer' />
+                  <Image src={'/assets/Youtube.svg'} alt='facebook' width={35} height={35} className='cursor-pointer' />
+               </div>
+
             </div>
 
          </div>
-         <div className='mt-10 w-fit max-auto'>
-            <h2 className="text-[440px]  text-outline mb-[-280px] ml-[-60px]">
+         <div className='mt-5 md:mt-10 w-full'>
+            <h2 className="text-[130px]  text-outline mb-[-120px] mx-[-18px]
+               md:text-[440px] md:mb-[-280px] md:ml-[-60px]">
                BoatingX
             </h2>
          </div>

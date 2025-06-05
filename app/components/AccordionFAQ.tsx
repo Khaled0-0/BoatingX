@@ -5,13 +5,15 @@ import Accordioncomponent from './Accordioncomponent'
 
 const AccordionFAQ = () => {
    return (
-      <section className='my-20 mx-44'>
-         <div className='mb-20'>
-            <h2 className='text-[#0F1A2B] text-center  text-6xl font-normal'>
+      <section className='md:my-20 md:mx-15  lg:mx-30 '>
+         <div className='my-20'>
+            <h2 className='text-[#0F1A2B] text-center text-4xl md:text-6xl font-normal'>
                Got Your Questions Answered!
             </h2>
          </div>
-         <Accordioncomponent />
+         <div className='mx-2'>
+            <Accordioncomponent />
+         </div>
       </section>
    )
 }

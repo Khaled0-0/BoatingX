@@ -17,7 +17,7 @@ const Accordioncomponent = () => {
                <AccordionTrigger>
                   <div className='flex'>
                      <span className='mr-3 text-2xl'>01</span>
-                     <h2 className='mb-4 text-[#0F1A2B] text-2xl'>
+                     <h2 className='mb-4 text-[#0F1A2B] text-xl md:text-2xl'>
                         Why choose an authorized dealer like BoatingX?
                      </h2>
                   </div>
@@ -39,7 +39,7 @@ const Accordioncomponent = () => {
                <AccordionTrigger>
                   <div className='flex'>
                      <span className='mr-3 text-2xl'>02</span>
-                     <h2 className='mb-4 text-[#0F1A2B] text-2xl'>
+                     <h2 className='mb-4 text-[#0F1A2B] text-xl md:text-2xl'>
                         What financing options are available?
                      </h2>
                   </div>
@@ -61,7 +61,7 @@ const Accordioncomponent = () => {
                <AccordionTrigger>
                   <div className='flex'>
                      <span className='mr-3 text-2xl'>03</span>
-                     <h2 className='mb-4 text-[#0F1A2B] text-2xl'>
+                     <h2 className='mb-4 text-[#0F1A2B] text-xl md:text-2xl'>
                         How do you handle maintenance in Egypt?
                      </h2>
                   </div>
@@ -83,7 +83,7 @@ const Accordioncomponent = () => {
                <AccordionTrigger>
                   <div className='flex'>
                      <span className='mr-3 text-2xl'>04</span>
-                     <h2 className='mb-4 text-[#0F1A2B] text-2xl'>
+                     <h2 className='mb-4 text-[#0F1A2B] text-xl md:text-2xl'>
                         Can I customize my yacht?
                      </h2>
                   </div>
@@ -105,7 +105,7 @@ const Accordioncomponent = () => {
                <AccordionTrigger>
                   <div className='flex'>
                      <span className='mr-3 text-2xl'>05</span>
-                     <h2 className='mb-4 text-[#0F1A2B] text-2xl'>
+                     <h2 className='mb-4 text-[#0F1A2B] text-xl md:text-2xl'>
                         What&apos;s the delivery timeline?
                      </h2>
                   </div>
