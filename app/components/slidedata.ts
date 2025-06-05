@@ -14,7 +14,7 @@ export const SLIDE_DATA: SlideData[] = [
       ],
    },
    {
-      imageSrc: '/assets/motor.png',
+      imageSrc: '/assets/boat1.png',
       title: 'Sample Motor Boat',
       price: 'From 99 000 € (VAT excluded)',
       logoSrc: '/assets/fjord-black.svg',
@@ -36,7 +36,7 @@ export const SLIDE_DATA: SlideData[] = [
       ],
    },
    {
-      imageSrc: '/assets/motor.png',
+      imageSrc: '/assets/boat1.png',
       title: 'Sample Motor Boat',
       price: 'From 99 000 € (VAT excluded)',
       logoSrc: '/assets/fjord-black.svg',
