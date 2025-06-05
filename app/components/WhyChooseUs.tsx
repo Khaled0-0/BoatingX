@@ -6,7 +6,7 @@ import { whyChooseUsData } from './data'
 
 const WhyChooseUs = () => {
    return (
-      <section className=' my-20'>
+      <section className=' my-20 px-5'>
 
          <div className='flex flex-col items-center gap-3'>
             <h2 className='text-[#0F1A2B] text-center text-3xl md:text-5xl font-normal'>

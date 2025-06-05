@@ -9,7 +9,7 @@ const OurStory = () => {
    return (
       <section className='mb-30 md:mb-0'>
 
-         <article className='flex flex-col items-center gap-5 my-10  px-2 md:px-0 '>
+         <article className='flex flex-col items-center gap-5 my-10  px-5 md:px-0 '>
             <h2 className='text-[#C7AB17] text-center text-2xl sm:text-2xl md:text-4xl font-semibold
                '>
                Egypt&apos;s Premier Gateway to
@@ -36,7 +36,7 @@ const OurStory = () => {
             {/* Overlay Card */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:shadow-md shadow-none bg-white p-10 my-30 md:my-0 ">
 
-               <div className=' flex flex-col md:flex-row md:items-start items-center justify-between gap-8'>
+               <div className=' flex flex-col md:flex-row md:items-start items-center justify-between gap-8 px-5'>
 
                   <div className='flex flex-col items-center gap-5 border-b border-gray-300 md:border-none'>
                      <Image src={'/assets/nord.png'} alt='ourstory' width={140} height={100} />
