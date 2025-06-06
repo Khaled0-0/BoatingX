@@ -35,7 +35,7 @@
 .embla {
   max-width: 100%;
   margin: 0 auto;
-  --slide-height: 19rem;
+  --slide-height: 0rem;
   --slide-size: 40%;
   /* default for large screens */
 }
@@ -56,11 +56,13 @@
 
 @media (max-width: 426px) {
   .embla {
-    --slide-size: 200%;
+    --slide-size: 100%;
   }
 
   .embla__slide__card {
-    width: 47%;
+    width: 100%;
+    margin-left: 40px;
+    margin-right: 40px;
   }
 }
 
@@ -194,7 +196,7 @@
 }
 
 .embla__parallax {
-  border-radius: 1.8rem;
+  /* border-radius: 1.8rem; */
   height: 100%;
   /* overflow: hidden; */
 }
