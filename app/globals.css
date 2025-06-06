@@ -56,24 +56,22 @@
 
 @media (max-width: 426px) {
   .embla {
-    --slide-size: 100%;
+    --slide-size: 125%;
   }
 
   .embla__slide__card {
-    width: 100%;
-    margin-left: 40px;
-    margin-right: 40px;
+    width: 76%;
   }
 }
 
 /* Extra small screens (e.g., very narrow phones) */
 @media (max-width: 320px) {
   .embla {
-    --slide-size: 250%;
+    --slide-size: 130%;
   }
 
   .embla__slide__card {
-    width: 38%;
+    width: 70%;
   }
 }
 

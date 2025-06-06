@@ -144,8 +144,8 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
             <div className="embla__container">
                {slides.map((slide, index) => (
                   <div className="embla__slide overflow-x-clip" key={index}>
-                     <div className="embla__parallax ">
-                        <div className="embla__parallax__layer ">
+                     <div className="embla__parallax">
+                        <div className="embla__parallax__layer">
                            <div className='embla__slide__card overflow-x-clip'>
                               <div>
                                  <Image src={slide.imageSrc} alt={slide.title}
