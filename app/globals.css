@@ -52,6 +52,10 @@
   .embla {
     --slide-size: 80%;
   }
+
+  .embla__slide {
+    overflow-x: hidden;
+  }
 }
 
 @media (max-width: 426px) {
@@ -61,6 +65,10 @@
 
   .embla__slide__card {
     width: 76%;
+  }
+
+  .embla__slide {
+    overflow-x: hidden;
   }
 }
 

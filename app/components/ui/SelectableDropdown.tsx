@@ -31,7 +31,7 @@ export const SelectableDropdown = ({
 }: SelectableDropdownProps) => {
    return (
       <Select value={value} onValueChange={onChange}>
-         <SelectTrigger className={`w-[130px] ${className}`}>
+         <SelectTrigger className={`w-[130px] ${className} ${value ? 'border-[#C7AB17]' : ''}`}>
             <SelectValue placeholder={placeholder} />
          </SelectTrigger>
          <SelectContent>

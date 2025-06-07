@@ -88,7 +88,8 @@ const Category = () => {
          <div className='pt-5 px-30 max-w-fit flex gap-2 items-center'>
             <button
                onClick={handleClearAll}
-               className='text-[#C7AB17] text-sm font-semibold not-italic'
+               className='text-[#C7AB17] text-sm font-semibold not-italic cursor-pointer 
+               hover:text-[#C7AB17]/60 '
             >
                CLEAR
             </button>
@@ -110,7 +111,7 @@ const Category = () => {
                      <p className='text-lg font-medium'>{val}</p>
                      <Image
                         onClick={() => handleClear(key as keyof typeof selectedValues)}
-                        className='cursor-pointer hover:bg-red-400/70 hover:rounded-2xl '
+                        className='cursor-pointer hover:bg-red-500 hover:rounded-full '
                         src='/assets/close.svg'
                         alt='close'
                         width={14}

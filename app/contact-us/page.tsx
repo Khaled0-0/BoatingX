@@ -4,7 +4,7 @@ import AccordionFAQ from '../components/AccordionFAQ'
 
 const ContactUs = () => {
    return (
-      <section className='mt-28 mx-40'>
+      <section>
          <FormContact />
          <AccordionFAQ />
       </section>

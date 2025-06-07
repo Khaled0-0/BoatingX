@@ -58,144 +58,147 @@ export function FormContact() {
    ];
 
    return (
-      <Form {...form}>
+      <div className='flex flex-col items-center mt-30'>
 
-         <header className='flex flex-col items-center gap-3'>
-            <h2 className='text-[#0F1A2B] text-center  text-5xl font-normal'>
-               Contact Us
-            </h2>
-            <p className='text-center text-[#6C757D] text-lg font-normal'>
-               Using the form below to contact our team directly
-            </p>
-         </header>
+         <Form {...form}>
 
-         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 mt-10 mb-40 ">
+            <header className='flex flex-col items-center gap-3'>
+               <h2 className='text-[#0F1A2B] text-center  text-5xl font-normal'>
+                  Contact Us
+               </h2>
+               <p className='text-center text-[#6C757D] text-lg font-normal'>
+                  Using the form below to contact our team directly
+               </p>
+            </header>
 
-            <div className="grid grid-cols-2 gap-5">
-               {/* Title */}
-               <FormField
-                  control={form.control}
-                  name="title"
-                  render={({ field }) => (
-                     <FormItem>
-                        <FormLabel>Title</FormLabel>
-                        <FormControl>
-                           <SelectableDropdown
-                              label=""
-                              placeholder="Title"
-                              value={field.value}
-                              onChange={field.onChange}
-                              options={titleOptions}
-                              className="w-full flex justify-between items-center 
-                              focus-visible:ring-gray-100 focus-visible:ring-2 focus-visible:rounded-[0px] "
-                           />
-                        </FormControl>
-                        <FormMessage />
-                     </FormItem>
-                  )}
-               />
-               {/* User Name */}
-               <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                     <FormItem>
-                        <FormLabel>Name</FormLabel>
-                        <FormControl>
-                           <Input className="w-full" placeholder="Username" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                     </FormItem>
-                  )}
-               />
-            </div>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 w-[85%] md:w-[70%] mt-10 ">
 
-            {/* Email */}
-            <FormField
-               control={form.control}
-               name="email"
-               render={({ field }) => (
-                  <FormItem>
-                     <FormLabel>Email</FormLabel>
-                     <FormControl>
-                        <Input className="w-full" placeholder="Email" {...field} />
-                     </FormControl>
-                     <FormMessage />
-                  </FormItem>
-               )}
-            />
-
-            {/* Phone Number + Preferred Contact */}
-            <div className="grid grid-cols-2 gap-5">
-
-               <FormField
-                  control={form.control}
-                  name="phoneNumber"
-                  render={({ field }) => (
-                     <FormItem>
-                        <FormLabel>Phone Number</FormLabel>
-                        <FormControl>
-                           <PhoneInput
-                              country={'us'}
-                              value={field.value}
-                              onChange={(phone) => field.onChange(phone)}
-                              inputClass="!w-full !h-10 !text-sm !rounded-none"
-                              buttonClass="!bg-[#6C757D1A] !rounded-none"
-                              containerClass="!w-full !h-10 !text-sm !rounded-none"
-                              inputProps={{
-                                 name: 'phoneNumber',
-                                 required: false,
-                                 autoFocus: false,
-                              }}
-                           />
-                        </FormControl>
-                        <FormMessage />
-                     </FormItem>
-                  )}
-               />
-
-               <FormField
-                  control={form.control}
-                  name="preferredContact"
-                  render={({ field }) => (
-                     <FormItem>
-                        <FormLabel>Preferred Contact</FormLabel>
-                        <FormControl>
-                           <div>
+               <div className="grid md:grid-cols-2 grid-cols-1 gap-5">
+                  {/* Title */}
+                  <FormField
+                     control={form.control}
+                     name="title"
+                     render={({ field }) => (
+                        <FormItem>
+                           <FormLabel>Title</FormLabel>
+                           <FormControl>
                               <SelectableDropdown
                                  label=""
-                                 placeholder="Any"
-                                 value={(field.value as string | undefined) ?? ''}
+                                 placeholder="Title"
+                                 value={field.value}
                                  onChange={field.onChange}
-                                 options={titleOptions2}
+                                 options={titleOptions}
                                  className="w-full flex justify-between items-center 
                               focus-visible:ring-gray-100 focus-visible:ring-2 focus-visible:rounded-[0px] "
                               />
-                           </div>
+                           </FormControl>
+                           <FormMessage />
+                        </FormItem>
+                     )}
+                  />
+                  {/* User Name */}
+                  <FormField
+                     control={form.control}
+                     name="name"
+                     render={({ field }) => (
+                        <FormItem>
+                           <FormLabel>Name</FormLabel>
+                           <FormControl>
+                              <Input className="w-full" placeholder="Username" {...field} />
+                           </FormControl>
+                           <FormMessage />
+                        </FormItem>
+                     )}
+                  />
+               </div>
+
+               {/* Email */}
+               <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                     <FormItem>
+                        <FormLabel>Email</FormLabel>
+                        <FormControl>
+                           <Input className="w-full" placeholder="Email" {...field} />
                         </FormControl>
                         <FormMessage />
                      </FormItem>
                   )}
                />
-            </div>
 
-            {/* Textarea */}
-            <FormField
-               control={form.control}
-               name="description"
-               render={({ field }) => (
-                  <FormItem>
-                     <FormLabel>Description</FormLabel>
-                     <FormControl>
-                        <Textarea className="w-full h-30" placeholder="Description" {...field} />
-                     </FormControl>
-                     <FormMessage />
-                  </FormItem>
-               )}
-            />
+               {/* Phone Number + Preferred Contact */}
+               <div className="grid md:grid-cols-2 grid-cols-1 gap-5">
 
-            <Button type="submit" className="w-full h-15 rounded-none bg-[#C7AB17] text-white text-xl font-bold cursor-pointer hover:bg-[#C7AB17]/80 ">Submit</Button>
-         </form>
-      </Form>
+                  <FormField
+                     control={form.control}
+                     name="phoneNumber"
+                     render={({ field }) => (
+                        <FormItem>
+                           <FormLabel>Phone Number</FormLabel>
+                           <FormControl>
+                              <PhoneInput
+                                 country={'us'}
+                                 value={field.value}
+                                 onChange={(phone) => field.onChange(phone)}
+                                 inputClass="!w-full !h-10 !text-sm !rounded-none"
+                                 buttonClass="!bg-[#6C757D1A] !rounded-none"
+                                 containerClass="!w-full !h-10 !text-sm !rounded-none"
+                                 inputProps={{
+                                    name: 'phoneNumber',
+                                    required: false,
+                                    autoFocus: false,
+                                 }}
+                              />
+                           </FormControl>
+                           <FormMessage />
+                        </FormItem>
+                     )}
+                  />
+
+                  <FormField
+                     control={form.control}
+                     name="preferredContact"
+                     render={({ field }) => (
+                        <FormItem>
+                           <FormLabel>Preferred Contact</FormLabel>
+                           <FormControl>
+                              <div>
+                                 <SelectableDropdown
+                                    label=""
+                                    placeholder="Any"
+                                    value={(field.value as string | undefined) ?? ''}
+                                    onChange={field.onChange}
+                                    options={titleOptions2}
+                                    className="w-full flex justify-between items-center 
+                                 focus-visible:ring-gray-100 focus-visible:ring-2 focus-visible:rounded-[0px] "
+                                 />
+                              </div>
+                           </FormControl>
+                           <FormMessage />
+                        </FormItem>
+                     )}
+                  />
+               </div>
+
+               {/* Textarea */}
+               <FormField
+                  control={form.control}
+                  name="description"
+                  render={({ field }) => (
+                     <FormItem>
+                        <FormLabel>Description</FormLabel>
+                        <FormControl>
+                           <Textarea className="w-full h-30" placeholder="Description" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                     </FormItem>
+                  )}
+               />
+
+               <Button type="submit" className="w-full h-15 rounded-none bg-[#C7AB17] text-white text-xl font-bold cursor-pointer hover:bg-[#C7AB17]/80 ">Submit</Button>
+            </form>
+         </Form>
+      </div>
    )
 }
