@@ -35,7 +35,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
    const tweenFactor = useRef(0)
    const tweenNodes = useRef<HTMLElement[]>([])
 
-   const { selectedIndex, scrollSnaps, onDotButtonClick } =
+   const { selectedIndex, onDotButtonClick } =
       useDotButton(emblaApi)
 
    const {
@@ -110,6 +110,17 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
          .on('slideFocus', tweenParallax)
    }, [emblaApi, tweenParallax, setTweenNodes, setTweenFactor])
 
+
+   // 3-dot logic
+   const DOT_COUNT = 4;
+   const totalSlides = slides.length;
+   const dotWindowStart = Math.floor(selectedIndex / DOT_COUNT) * DOT_COUNT;
+   const getDotSlideIndex = (dotIdx: number) => {
+      return (dotWindowStart + dotIdx) % totalSlides;
+   };
+
+
+
    return (
       <div className="embla">
 
@@ -119,16 +130,21 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
             </div>
 
             <div className="embla__dots">
-               {scrollSnaps.map((_, index) => (
-                  <DotButton
-                     key={index}
-                     onClick={() => onDotButtonClick(index)}
-                     className={'embla__dot'.concat(
-                        index === selectedIndex ? ' embla__dot--selected' : ''
-                     )}
-                  />
-               ))}
+               {[...Array(DOT_COUNT)].map((_, dotIdx) => {
+                  const slideIdx = getDotSlideIndex(dotIdx);
+                  return (
+                     <DotButton
+                        key={dotIdx}
+                        onClick={() => onDotButtonClick(slideIdx)}
+                        className={
+                           'embla__dot' +
+                           (slideIdx === selectedIndex ? ' embla__dot--selected' : '')
+                        }
+                     />
+                  );
+               })}
             </div>
+
             <div className='embla__buttons'>
                <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
             </div>

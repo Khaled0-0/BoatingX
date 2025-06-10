@@ -75,11 +75,11 @@
 /* Extra small screens (e.g., very narrow phones) */
 @media (max-width: 320px) {
   .embla {
-    --slide-size: 130%;
+    --slide-size: 100%;
   }
 
   .embla__slide__card {
-    width: 70%;
+    width: 450%;
   }
 }
 
@@ -304,10 +304,9 @@
 /* New styles for Embla Carousel slides */
 .embla__slide__card {
   border: 1px solid #e5e7eb;
-  /* border-gray-200 */
-  padding: 1.25rem;
-  /* ml-4 mr-4 */
-  /* p-5 */
+  padding: 1rem;
+  height: 100%;
+  width: 100%;
 }
 
 /* 

@@ -22,4 +22,19 @@ export const NEW_SLIDE_DATA: SlideData[] = [
       heading: 'Fjord 53 XL',
       paragraph: 'Yachts excel in different waters, ensuring safety and optimal fishing conditions.',
    },
+   {
+      image: '/assets/s-two.png',
+      heading: 'Fjord 53 XL',
+      paragraph: 'Yachts excel in different waters, ensuring safety and optimal fishing conditions.',
+   },
+   {
+      image: '/assets/s-two.png',
+      heading: 'Fjord 53 XL',
+      paragraph: 'Yachts excel in different waters, ensuring safety and optimal fishing conditions.',
+   },
+   {
+      image: '/assets/s-two.png',
+      heading: 'Fjord 53 XL',
+      paragraph: 'Yachts excel in different waters, ensuring safety and optimal fishing conditions.',
+   },
 ];
