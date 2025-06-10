@@ -163,7 +163,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                      <div className="embla__parallax">
                         <div className="embla__parallax__layer">
                            <div className='embla__slide__card max-w-100 flex flex-col justify-between gap-2'>
-                              <div className=' max-h-50 my-5'>
+                              <div className=' max-h-50 mb-5'>
                                  <Image src={slide.imageSrc} alt={slide.title}
                                     width={400} height={400} className=' cursor-pointer' />
                               </div>
