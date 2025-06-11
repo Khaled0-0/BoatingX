@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const WhoWeAre = () => {
    return (
@@ -53,13 +54,14 @@ const WhoWeAre = () => {
 
                <div className='md:max-w-[50%] text-left flex flex-col gap-6'>
                   <p className='text-white text-ld md:text-xl font-normal leading-6 md:leading-7 '>
-                     Founded by Mark Richard in 1995, Palm Beach Motor Yachts is a world-celebrated, award-winning boat builder of Downeast-style luxury motor yachts. We proudly offer 34 model variations from 42 to 107 feet across our Classic, GT, and GTRS ranges.
-                     Each luxury yacht is crafted for performance, range, and fuel efficiency. Our dedication to quality ensures your investment provides a truly exceptional yachting experience.
+                     Founded by a group of passionate entrepreneurs with decades of experience in boating, media, and business, we came together with a shared vision — to transform how people in Egypt experience life at sea.
                   </p>
 
-                  <button className='text-white border border-white text-sm md:text-lg font-normal py-2 px-4 max-w-[150px]'>
-                     ABOUT US
-                  </button>
+                  <Link href={'/about'}>
+                     <button className='text-white border border-white text-sm md:text-lg font-normal py-2 px-4 max-w-[150px] cursor-pointer'>
+                        ABOUT US
+                     </button>
+                  </Link>
                </div>
             </div>
          </div>

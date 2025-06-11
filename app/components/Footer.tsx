@@ -13,12 +13,12 @@ const Footer = () => {
             fill
          />
 
-         <div className='container mx-auto px-4 flex flex-col items-center space-y-8 md:flex-row md:items-start md:justify-between md:space-y-0 '>
+         <div className='container mx-auto px-4 md:px-5 lg:px-10 flex flex-col items-start space-y-8 md:flex-row md:justify-between md:space-y-0 md:mt-10'>
             {/* Left Section: Logo, Description, Social Media */}
-            <div className=' md:max-w-65 mb-0 md:mb-5'>
+            <div className=' md:max-w-65 lg:max-w-80 mb-0 md:mb-5 '>
 
-               <Image src={'/assets/white-logo.svg'} alt='logo' width={120} height={120} />
-               <p className='text-gray-400 my-4'>
+               <Image src={'/assets/white-logo.svg'} alt='logo' width={140} height={120} />
+               <p className='text-gray-400 my-4 text-lg '>
                   FinEase is a finance platform you can
                   easily save, manage, and reach your
                   financial goals, all in one place!
@@ -35,9 +35,9 @@ const Footer = () => {
             </div>
 
             {/* Middle Sections: Link, Services */}
-            <div className='flex flex-col w-full gap-4 md:flex-row   md:justify-evenly md:gap-20'>
+            <div className='flex flex-col w-full md:flex-row gap-2 lg:gap-20  lg:justify-end md:items-start md:justify-end '>
 
-               <div>
+               <div className=''>
                   <h3 className='font-bold mb-4'>Link</h3>
                   <ul>
                      <li className='mb-2 text-gray-400'>Yacht Collections</li>
@@ -59,8 +59,8 @@ const Footer = () => {
                <div>
                   <h3 className='font-bold mb-4'>Boating X Info</h3>
                   <ul>
-                     <li className='mb-2 text-gray-400'>Hurgada Marina, Red Sea, Egypt</li>
-                     <li className='mb-2 text-gray-400'>+20 XXX XXX XXXX</li>
+                     {/* <li className='mb-2 text-gray-400'>Hurgada Marina, Red Sea, Egypt</li> */}
+                     <li className='mb-2 text-gray-400'>01227785715</li>
                      <li className='mb-2 text-gray-400'>info@boatingx.com</li>
                   </ul>
                </div>
@@ -76,8 +76,8 @@ const Footer = () => {
             </div>
 
          </div>
-         <div className='mt-5 md:mt-10 w-full'>
-            <h2 className="text-[130px]  text-outline mb-[-120px] mx-[-18px]
+         <div className='mt-5 md:mt-10 w-full footer__container'>
+            <h2 className="footer__text text-[130px]  text-outline mb-[-120px] mx-[-18px]
                md:text-[440px] md:mb-[-280px] md:ml-[-60px]">
                BoatingX
             </h2>

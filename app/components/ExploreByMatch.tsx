@@ -4,25 +4,25 @@ import { matchData } from './matchData';
 
 const ExploreByMatch = () => {
    return (
-      <section className="bg-white py-20 px-6 lg:px-40">
+      <section className="bg-white py-15 px-6 lg:px-15 style_lg">
          <div className="flex flex-col items-center gap-2 mb-10 text-center">
-            <h2 className="text-[#0F1A2B] text-4xl lg:text-5xl font-medium">
+            <h2 className="text-[#0F1A2B] text-3xl md:text-4xl lg:text-5xl font-medium">
                Explore Your Perfect Match
             </h2>
-            <p className="text-[#6C757D] text-lg leading-6 max-w-2xl">
+            <p className="text-[#6C757D] text-base md:text-lg leading-6 max-w-2xl">
                Explore what makes each brand unique
             </p>
          </div>
 
-         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:py-10">
             {matchData.map(({ id, logo, description, features, cta }) => (
                <article
                   key={id}
-                  className="p-8 border border-gray-200 rounded"
-               >
+                  className="p-5 border border-gray-200 rounded">
                   <header className="mb-6">
-                     <Image src={logo} alt="brand logo" width={160} height={32} />
-                     <p className="text-[#6C757D] text-lg mt-4 leading-6">
+                     <Image src={logo} alt="brandq logo" width={120} height={100}
+                        className='!h-[70px]' />
+                     <p className="text-[#6C757D]  text-base md:text-lg mt-4 leading-6">
                         {description}
                      </p>
                   </header>
@@ -38,7 +38,7 @@ const ExploreByMatch = () => {
                                  height={16}
                               />
                            </div>
-                           <span className="text-[#0F1A2B] text-lg font-medium">
+                           <span className="text-[#0F1A2B] text-base md:text-lg font-medium">
                               {feature}
                            </span>
                         </li>

@@ -18,19 +18,17 @@ const Accordioncomponent = () => {
                   <div className='flex'>
                      <span className='mr-3 text-2xl'>01</span>
                      <h2 className='mb-4 text-[#0F1A2B] text-xl md:text-2xl'>
-                        Why choose an authorized dealer like BoatingX?
+                        What size and type of boat is right for me?
                      </h2>
                   </div>
                </AccordionTrigger>
                <AccordionContent className='bg-gray-100 p-4'>
                   <p className='text-[#0F1A2B] text-lg font-normal  '>
-                     We provide tailored solutions through our marine finance partners:
+                     We help you choose the ideal boat based on your lifestyle, usage,
                      <br />
-                     Flexible payment plans (up to 10 years)
+                     passenger needs, and budget. Whether you&apos;re into leisure cruising,
                      <br />
-                     Charter management programs
-                     <br />
-                     Corporate leasing structures
+                     fishing, or water sports, we guide you to the best fit.
                   </p>
                </AccordionContent>
             </AccordionItem>
@@ -40,19 +38,19 @@ const Accordioncomponent = () => {
                   <div className='flex'>
                      <span className='mr-3 text-2xl'>02</span>
                      <h2 className='mb-4 text-[#0F1A2B] text-xl md:text-2xl'>
-                        What financing options are available?
+                        What is included in the boat&apos;s price?
                      </h2>
                   </div>
                </AccordionTrigger>
                <AccordionContent className='bg-gray-100 p-4'>
                   <p className='text-[#0F1A2B] text-lg font-normal  '>
-                     We provide tailored solutions through our marine finance partners:
+                     Our boat prices typically include the hull, standard equipment, and
                      <br />
-                     Flexible payment plans (up to 10 years)
+                     base engine(s). Additional features like electronics, trailers,
                      <br />
-                     Charter management programs
+                     shipping, registration, and taxes may vary and are quoted
                      <br />
-                     Corporate leasing structures
+                     separately.
                   </p>
                </AccordionContent>
             </AccordionItem>
@@ -62,19 +60,17 @@ const Accordioncomponent = () => {
                   <div className='flex'>
                      <span className='mr-3 text-2xl'>03</span>
                      <h2 className='mb-4 text-[#0F1A2B] text-xl md:text-2xl'>
-                        How do you handle maintenance in Egypt?
+                        Do you offer after-sales service and maintenance?
                      </h2>
                   </div>
                </AccordionTrigger>
                <AccordionContent className='bg-gray-100 p-4'>
                   <p className='text-[#0F1A2B] text-lg font-normal  '>
-                     We provide tailored solutions through our marine finance partners:
+                     Yes, BoatingX provides full after-sales support including scheduled
                      <br />
-                     Flexible payment plans (up to 10 years)
+                     maintenance, warranty services, spare parts, and repairs to keep
                      <br />
-                     Charter management programs
-                     <br />
-                     Corporate leasing structures
+                     your boat running smoothly.
                   </p>
                </AccordionContent>
             </AccordionItem>
@@ -84,19 +80,17 @@ const Accordioncomponent = () => {
                   <div className='flex'>
                      <span className='mr-3 text-2xl'>04</span>
                      <h2 className='mb-4 text-[#0F1A2B] text-xl md:text-2xl'>
-                        Can I customize my yacht?
+                        Can I customize my boat or add optional features?
                      </h2>
                   </div>
                </AccordionTrigger>
                <AccordionContent className='bg-gray-100 p-4'>
                   <p className='text-[#0F1A2B] text-lg font-normal  '>
-                     We provide tailored solutions through our marine finance partners:
+                     Absolutely. Most models come with a range of options including
                      <br />
-                     Flexible payment plans (up to 10 years)
+                     engine upgrades, electronics packages, upholstery choices, and
                      <br />
-                     Charter management programs
-                     <br />
-                     Corporate leasing structures
+                     water sports gear.
                   </p>
                </AccordionContent>
             </AccordionItem>
@@ -106,19 +100,16 @@ const Accordioncomponent = () => {
                   <div className='flex'>
                      <span className='mr-3 text-2xl'>05</span>
                      <h2 className='mb-4 text-[#0F1A2B] text-xl md:text-2xl'>
-                        What&apos;s the delivery timeline?
+                        How long does it take to receive my boat after ordering?
                      </h2>
                   </div>
                </AccordionTrigger>
                <AccordionContent className='bg-gray-100 p-4'>
                   <p className='text-[#0F1A2B] text-lg font-normal  '>
-                     We provide tailored solutions through our marine finance partners:
+                     Delivery time depends on the model, availability, and                      <br />
+                     customization. On average, it can range from 8 to 16 weeks. We&apos;ll
                      <br />
-                     Flexible payment plans (up to 10 years)
-                     <br />
-                     Charter management programs
-                     <br />
-                     Corporate leasing structures
+                     provide a clear timeline when you place your order.
                   </p>
                </AccordionContent>
             </AccordionItem>

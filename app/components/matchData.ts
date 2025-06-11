@@ -15,7 +15,7 @@ export const matchData = [
    },
    {
       id: 2,
-      logo: '/assets/fjord-black.svg',
+      logo: '/assets/nord.png',
       description: 'German precision meets Mediterranean lifestyle',
       features: [
          'Arctic-Proven – Tested in extreme conditions',
