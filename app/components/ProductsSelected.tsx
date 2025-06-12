@@ -6,16 +6,19 @@ const ProductsSelected = () => {
    const dataToDisplay = Array.from({ length: 10 }).map((_, index) => SLIDE_DATA[index % SLIDE_DATA.length])
 
    return (
-      <section className='grid grid-cols-2 gap-5 py-5 px-30'>
+      <section className='grid grid-cols-1 md:grid-cols-2 gap-5 my-10 mx-5 lg:mx-15'>
          {dataToDisplay.map((product, index) => (
-            <div key={index} className='embla__slide__card'>
-               <Image src={product.imageSrc} alt='boat' width={6000} height={500} />
-               <div className='flex items-center justify-between'>
-                  <h2 className='embla__slide__title'>{product.title}</h2>
-                  <Image src={product.logoSrc} alt='fjord' width={140} height={140} />
-               </div>
-               <div>
-                  <p className='embla__slide__price '>{product.price}</p>
+            <div key={index} className='embla__slide__card flex flex-col justify-between gap-5'>
+               <Image src={product.imageSrc} alt='boat' width={400} height={500}
+                  className='!h-[300px] !w-[100%]' />
+               <div className='flex flex-col items-start gap-2'>
+                  <div className='flex items-center justify-between w-full'>
+                     <h2 className='embla__slide__title'>{product.title}</h2>
+                     <Image src={product.logoSrc} alt='fjord' width={72} height={14} />
+                  </div>
+                  <div>
+                     <p className='embla__slide__price '>{product.price}</p>
+                  </div>
                </div>
                <div className='embla__slide__details'>
                   {product.details.map((detail, detailIndex) => (

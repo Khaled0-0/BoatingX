@@ -50,11 +50,12 @@ const Category = () => {
 
    return (
       <section>
-         <div className='pt-25 px-30 flex flex-col gap-5'>
+         <div className='pt-25 md:mx-10 m-5 flex flex-col lg:mx-20'>
             <SearchInput />
          </div>
 
-         <div className='pt-5 px-30 flex gap-3'>
+         <div className=' md:mx-10 lg:mx-25 m-5 gap-5 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8
+         justify-items-center lg:justify-items-start lg:gap-0 selectable__style'>
             <SelectableDropdown
                label="Type"
                placeholder="Type"
@@ -85,43 +86,45 @@ const Category = () => {
             />
          </div>
 
-         <div className='pt-5 px-30 max-w-fit flex gap-2 items-center'>
-            <button
-               onClick={handleClearAll}
-               className='text-[#C7AB17] text-sm font-semibold not-italic cursor-pointer 
+         <div className='md:mt-5 lg:ml-30 mx-5 md:ml-20 w-[90%] md:max-w-fit flex flex-col md:flex-row  gap-2 items-center md:items-center justify-center'>
+            <div className='flex gap-2'>
+               <button
+                  onClick={handleClearAll}
+                  className='text-[#C7AB17] text-sm font-semibold not-italic cursor-pointer 
                hover:text-[#C7AB17]/60 '
-            >
-               CLEAR
-            </button>
+               >
+                  CLEAR
+               </button>
+               <div className='border-1 border-gray-200 h-[16px] '></div>
+            </div>
 
-            <div className='border-1 border-gray-200 h-[16px] '></div>
-
-            {Object.entries(selectedValues).map(([key, val]) =>
-               val ? (
-                  <div
-                     key={key}
-                     className='border-gray-200 border px-3  text- flex gap-2 items-center focus:outline-none focus:ring-2 focus:ring-gray-200/50'
-                     tabIndex={0}
-                     onKeyDown={(e) => {
-                        if (e.key === 'Backspace' || e.key === 'Delete') {
-                           handleClear(key as keyof typeof selectedValues);
-                        }
-                     }}
-                  >
-                     <p className='text-lg font-medium'>{val}</p>
-                     <Image
-                        onClick={() => handleClear(key as keyof typeof selectedValues)}
-                        className='cursor-pointer hover:bg-red-500 hover:rounded-full '
-                        src='/assets/close.svg'
-                        alt='close'
-                        width={14}
-                        height={14}
-                     />
-                  </div>
-               ) : null
-            )}
+            <div className='grid grid-cols-2 gap-2 md:grid-cols-4 w-[90%] h-fit'>
+               {Object.entries(selectedValues).map(([key, val]) =>
+                  val ? (
+                     <div
+                        key={key}
+                        className='border-gray-200 border p-1  text- flex gap-2 items-center focus:outline-none focus:ring-2 focus:ring-gray-200/50 justify-around'
+                        tabIndex={0}
+                        onKeyDown={(e) => {
+                           if (e.key === 'Backspace' || e.key === 'Delete') {
+                              handleClear(key as keyof typeof selectedValues);
+                           }
+                        }}>
+                        <p className='text-lg font-medium'>{val}</p>
+                        <Image
+                           onClick={() => handleClear(key as keyof typeof selectedValues)}
+                           className='cursor-pointer hover:bg-red-500 hover:rounded-full '
+                           src='/assets/close.svg'
+                           alt='close'
+                           width={14}
+                           height={14}
+                        />
+                     </div>
+                  ) : null
+               )}
+            </div>
          </div>
-      </section>
+      </section >
    );
 };
 

@@ -25,7 +25,7 @@ export type SlideData = {
 }
 
 type PropType = {
-   slides: SlideData[]; // Update PropType to accept array of SlideData
+   slides: SlideData[];
    options?: EmblaOptionsType
 }
 

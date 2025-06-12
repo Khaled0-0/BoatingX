@@ -66,12 +66,13 @@ export function FormContact() {
                <h2 className='text-[#0F1A2B] text-center  text-5xl font-normal'>
                   Contact Us
                </h2>
-               <p className='text-center text-[#6C757D] text-lg font-normal'>
+               <p className='text-center text-[#6C757D] text-base lg:text-lg font-normal px-5'>
                   Using the form below to contact our team directly
                </p>
             </header>
 
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 w-[85%] md:w-[70%] mt-10 ">
+            <form onSubmit={form.handleSubmit(onSubmit)}
+               className="space-y-8 w-[83%] md:w-[70%] mt-10 ">
 
                <div className="grid md:grid-cols-2 grid-cols-1 gap-5">
                   {/* Title */}

@@ -15,6 +15,20 @@
   box-sizing: border-box;
 }
 
+@media ((min-width: 1024px)) {
+  .selectable__style {
+    gap: 150px;
+  }
+
+}
+
+@media ((min-width: 1440px)) {
+  .selectable__style {
+    gap: 0px;
+  }
+
+}
+
 .embla__viewport {
   overflow: hidden;
 }
@@ -273,13 +287,12 @@
 
 .embla__slide__price {
   color: #C7AB17;
-  font-weight: 400;
-  font-size: 1.3rem;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 .embla__slide__details {
   border: 1px solid #e5e7eb;
-  margin-top: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -298,14 +311,12 @@
 .embla__slide__detail_label {
   color: #6C757D;
   text-align: center;
-  font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .embla__slide__detail_value {
   color: #0F1A2B;
-  font-weight: 400;
-  font-size: 1rem;
+  font-weight: 600;
   text-align: center;
 }
 
@@ -323,18 +334,6 @@
   }
 
 }
-
-/* @media (min-width: 1024px) {
-  .screen__xl {
-    height: 110vh;
-  }
-
-  .xl__card {
-    margin-top: 10px;
-    width: 500px;
-  }
-
-} */
 
 
 .glass-style {
