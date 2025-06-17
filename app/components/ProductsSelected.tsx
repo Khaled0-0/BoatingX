@@ -2,8 +2,18 @@ import Image from 'next/image'
 import React from 'react'
 import { SLIDE_DATA } from './slidedata'
 
-const ProductsSelected = () => {
-   const dataToDisplay = Array.from({ length: 10 }).map((_, index) => SLIDE_DATA[index % SLIDE_DATA.length])
+interface ProductsSelectedProps {
+   searchTerm: string;
+}
+
+const ProductsSelected = ({ searchTerm }: ProductsSelectedProps) => {
+   const filteredData = SLIDE_DATA.filter(product =>
+      product.title.toLowerCase().includes(searchTerm.toLowerCase())
+   )
+
+   const dataToDisplay = searchTerm
+      ? filteredData
+      : Array.from({ length: 10 }).map((_, index) => SLIDE_DATA[index % SLIDE_DATA.length])
 
    return (
       <section className='grid grid-cols-1 md:grid-cols-2 gap-5 my-10 mx-5 lg:mx-15'>

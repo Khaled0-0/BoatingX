@@ -1,34 +1,37 @@
 'use client';
 import React, { useState } from 'react';
-import SearchInput from './ui/SearchInput';
 import Image from 'next/image';
 import { SelectableDropdown } from './ui/SelectableDropdown';
 
 const options = {
-   type: [
-      { label: 'Sedan', value: 'sedan' },
-      { label: 'SUV', value: 'suv' },
+   RIB: [
+      { label: 'Airborne', value: 'airborne' },
    ],
-   class: [
-      { label: 'Economy', value: 'economy' },
-      { label: 'Luxury', value: 'luxury' },
+   Bow_Rider: [
+      { label: 'Avant', value: 'avant' },
    ],
-   make: [
-      { label: 'Toyota', value: 'toyota' },
-      { label: 'Honda', value: 'honda' },
+   Center_console: [
+      { label: 'Enduro', value: 'enduro' },
    ],
-   year: [
-      { label: '2020 - 2025', value: '2020 - 2025' },
-      { label: '2015 - 2015', value: '2015 - 2015' },
+   Day_Cruiser: [
+      { label: 'Noblese', value: 'noblese' },
+   ],
+   Wheelhouse: [
+      { label: 'Coupe', value: 'coupe' },
+   ],
+   Luxury_day_cruisers: [
+      { label: 'All Fjord', value: 'all-fjord' },
    ],
 };
 
 const Category = () => {
    const [selectedValues, setSelectedValues] = useState({
-      type: '',
-      class: '',
-      make: '',
-      year: '',
+      RIB: '',
+      Bow_Rider: '',
+      Center_Console: '',
+      Day_Cruiser: '',
+      Wheelhouse: '',
+      Luxury_day_cruisers: '',
    });
 
    const handleChange = (key: keyof typeof selectedValues, value: string) => {
@@ -41,48 +44,60 @@ const Category = () => {
 
    const handleClearAll = () => {
       setSelectedValues({
-         type: '',
-         class: '',
-         make: '',
-         year: '',
+         RIB: '',
+         Bow_Rider: '',
+         Center_Console: '',
+         Day_Cruiser: '',
+         Wheelhouse: '',
+         Luxury_day_cruisers: '',
       });
    };
 
    return (
       <section>
-         <div className='pt-25 md:mx-10 m-5 flex flex-col lg:mx-20'>
-            <SearchInput />
-         </div>
-
          <div className=' md:mx-10 lg:mx-25 m-5 gap-5 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8
          justify-items-center lg:justify-items-start lg:gap-0 selectable__style'>
             <SelectableDropdown
-               label="Type"
-               placeholder="Type"
-               value={selectedValues.type}
-               onChange={(val) => handleChange('type', val)}
-               options={options.type}
+               label="RIB"
+               placeholder="RIB"
+               value={selectedValues.RIB}
+               onChange={(val) => handleChange('RIB', val)}
+               options={options.RIB}
             />
             <SelectableDropdown
-               label="Class"
-               placeholder="Class"
-               value={selectedValues.class}
-               onChange={(val) => handleChange('class', val)}
-               options={options.class}
+               label="Bow Rider"
+               placeholder="Bow Rider"
+               value={selectedValues.Bow_Rider}
+               onChange={(val) => handleChange('Bow_Rider', val)}
+               options={options.Bow_Rider}
             />
             <SelectableDropdown
-               label="Make"
-               placeholder="Make"
-               value={selectedValues.make}
-               onChange={(val) => handleChange('make', val)}
-               options={options.make}
+               label="Center Console"
+               placeholder="Center Console"
+               value={selectedValues.Center_Console}
+               onChange={(val) => handleChange('Center_Console', val)}
+               options={options.Center_console}
             />
             <SelectableDropdown
-               label="Year"
-               placeholder="Year"
-               value={selectedValues.year}
-               onChange={(val) => handleChange('year', val)}
-               options={options.year}
+               label="Day Cruiser"
+               placeholder="Day Cruiser"
+               value={selectedValues.Day_Cruiser}
+               onChange={(val) => handleChange('Day_Cruiser', val)}
+               options={options.Day_Cruiser}
+            />
+            <SelectableDropdown
+               label="Wheelhouse"
+               placeholder="Wheelhouse"
+               value={selectedValues.Wheelhouse}
+               onChange={(val) => handleChange('Wheelhouse', val)}
+               options={options.Wheelhouse}
+            />
+            <SelectableDropdown
+               label="Luxury Day Cruisers"
+               placeholder="Luxury Day Cruisers"
+               value={selectedValues.Luxury_day_cruisers}
+               onChange={(val) => handleChange('Luxury_day_cruisers', val)}
+               options={options.Luxury_day_cruisers}
             />
          </div>
 

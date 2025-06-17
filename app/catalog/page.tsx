@@ -1,17 +1,15 @@
-import React from 'react'
+
 import Category from '../components/Category'
-import ProductsSelected from '../components/ProductsSelected'
 import HelpSection from '../components/HelpSection'
+import SearchProductsWrapper from '../components/SearchProductsWrapper'
 import WhyChooseUs from '../components/WhyChooseUs'
 
-
-
-
 const Catalog = () => {
+
    return (
       <section>
+         <SearchProductsWrapper />
          <Category />
-         <ProductsSelected />
          <HelpSection />
          <WhyChooseUs />
       </section>
