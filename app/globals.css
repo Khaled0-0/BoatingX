@@ -104,7 +104,6 @@
     width: 100%;
     font-size: 440px;
   }
-
 }
 
 @media (max-width: 1025px) {
@@ -288,7 +287,6 @@
 .embla__slide__price {
   color: #C7AB17;
   font-weight: 600;
-  font-size: 1rem;
 }
 
 .embla__slide__details {

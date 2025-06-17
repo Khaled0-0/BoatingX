@@ -1,7 +1,8 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { SelectableDropdown } from './ui/SelectableDropdown';
+import { SlideData } from './embla/EmblaCarousel';
 
 const options = {
    RIB: [
@@ -24,7 +25,12 @@ const options = {
    ],
 };
 
-const Category = () => {
+interface CategoryProps {
+   products: SlideData[];
+   setFilteredProducts: React.Dispatch<React.SetStateAction<SlideData[]>>;
+}
+
+const Category = ({ products, setFilteredProducts }: CategoryProps) => {
    const [selectedValues, setSelectedValues] = useState({
       RIB: '',
       Bow_Rider: '',
@@ -53,9 +59,32 @@ const Category = () => {
       });
    };
 
+   useEffect(() => {
+      const applyFilters = () => {
+         let currentFilteredProducts = products;
+
+         if (selectedValues.Luxury_day_cruisers === 'all-fjord') {
+            currentFilteredProducts = products;
+         } else {
+            Object.entries(selectedValues).forEach(([, selectedValue]) => {
+               if (selectedValue) {
+                  currentFilteredProducts = currentFilteredProducts.filter((product) =>
+                     product.title.toLowerCase().includes(selectedValue.toLowerCase())
+                  );
+               }
+            });
+         }
+
+         setFilteredProducts(currentFilteredProducts);
+      };
+
+      applyFilters();
+   }, [selectedValues, products, setFilteredProducts]);
+
    return (
       <section>
-         <div className=' md:mx-10 lg:mx-25 m-5 gap-5 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8
+
+         <div className=' md:mx-10 lg:mx-15 m-5 gap-5 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8
          justify-items-center lg:justify-items-start lg:gap-0 selectable__style'>
             <SelectableDropdown
                label="RIB"
@@ -93,6 +122,7 @@ const Category = () => {
                options={options.Wheelhouse}
             />
             <SelectableDropdown
+               className='md:w-fit'
                label="Luxury Day Cruisers"
                placeholder="Luxury Day Cruisers"
                value={selectedValues.Luxury_day_cruisers}
@@ -101,7 +131,7 @@ const Category = () => {
             />
          </div>
 
-         <div className='md:mt-5 lg:ml-30 mx-5 md:ml-20 w-[90%] md:max-w-fit flex flex-col md:flex-row  gap-2 items-center md:items-center justify-center'>
+         <div className='md:mt-5 lg:ml-20  mx-5 md:ml-8 w-[90%] md:max-w-fit flex flex-col md:flex-row  gap-2 items-center md:items-center justify-center'>
             <div className='flex gap-2'>
                <button
                   onClick={handleClearAll}
@@ -113,12 +143,12 @@ const Category = () => {
                <div className='border-1 border-gray-200 h-[16px] '></div>
             </div>
 
-            <div className='grid grid-cols-2 gap-2 md:grid-cols-4 w-[90%] h-fit'>
+            <div className='grid grid-cols-2 gap-5 md:gap-2 md:grid-cols-6 w-fit h-fit'>
                {Object.entries(selectedValues).map(([key, val]) =>
                   val ? (
                      <div
                         key={key}
-                        className='border-gray-200 border p-1  text- flex gap-2 items-center focus:outline-none focus:ring-2 focus:ring-gray-200/50 justify-around'
+                        className='border-gray-200 border p-2  text- flex gap-2 items-center focus:outline-none focus:ring-2 focus:ring-gray-200/50 justify-around'
                         tabIndex={0}
                         onKeyDown={(e) => {
                            if (e.key === 'Backspace' || e.key === 'Delete') {

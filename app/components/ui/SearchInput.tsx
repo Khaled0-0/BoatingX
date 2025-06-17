@@ -7,7 +7,7 @@ interface SearchInputProps {
 
 const SearchInput = ({ setSearchTerm }: SearchInputProps) => {
    return (
-      <div className='pt-25 md:mx-10 m-5 flex flex-col lg:mx-20'>
+      <div className='pt-25 md:mx-10 m-5 flex flex-col lg:mx-10'>
 
          <div className="relative">
             <Image

@@ -16,7 +16,7 @@ export const SLIDE_DATA: SlideData[] = [
    {
       imageSrc: '/assets/boats/enduro830-57.jpg',
       title: 'Enduro 830 - 57',
-      price: 'From ? € (VAT excluded)',
+      price: 'From 124,000 € (VAT excluded)',
       logoSrc: '/assets/fjord-black.svg',
       details: [
          { iconSrc: '/assets/Lightning.svg', label: 'Max. engine power', value: '2 x 250 HP' },
@@ -70,7 +70,7 @@ export const SLIDE_DATA: SlideData[] = [
    },
    {
       imageSrc: '/assets/boats/nordkappnoblesse830-109.jpg',
-      title: 'Nordkapp Noblesse 830-109',
+      title: 'Nordkapp Noblese 830-109',
       price: 'From 132,900 € (VAT excluded)',
       logoSrc: '/assets/fjord-black.svg',
       details: [
@@ -92,7 +92,7 @@ export const SLIDE_DATA: SlideData[] = [
    },
    {
       imageSrc: '/assets/boats/nordkappnoblesse720-1.jpg',
-      title: 'Nordkapp Noblesse 720-1',
+      title: 'Nordkapp Noblese 720-1',
       price: 'From 76,600  € (VAT excluded)',
       logoSrc: '/assets/fjord-black.svg',
       details: [
@@ -136,7 +136,7 @@ export const SLIDE_DATA: SlideData[] = [
    },
    {
       imageSrc: '/assets/boats/nordkappnoblesse660-13.jpg',
-      title: 'Nordkapp Noblesse 660-13',
+      title: 'Nordkapp Noblese 660-13',
       price: 'From 59,900 € (VAT excluded)',
       logoSrc: '/assets/fjord-black.svg',
       details: [
@@ -148,7 +148,7 @@ export const SLIDE_DATA: SlideData[] = [
    {
       imageSrc: '/assets/boats/Nordkapp-C780-TTL-8765-2.jpg',
       title: 'Nordkapp C780 TTL 8765-2',
-      price: 'From ? € (VAT excluded)',
+      price: 'From 96,000 € (VAT excluded)',
       logoSrc: '/assets/fjord-black.svg',
       details: [
          { iconSrc: '/assets/Lightning.svg', label: 'Max. engine power', value: '2 x 250 HP' },
@@ -159,7 +159,7 @@ export const SLIDE_DATA: SlideData[] = [
    {
       imageSrc: '/assets/boats/Nordkapp-C780-TTL-7376.jpg',
       title: 'Nordkapp C780 TTL 7376',
-      price: 'From ? € (VAT excluded)',
+      price: 'From 96,000 € (VAT excluded)',
       logoSrc: '/assets/fjord-black.svg',
       details: [
          { iconSrc: '/assets/Lightning.svg', label: 'Max. engine power', value: '2 x 250 HP' },

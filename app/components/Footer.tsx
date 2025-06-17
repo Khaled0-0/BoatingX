@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Footer = () => {
    return (
@@ -40,28 +41,34 @@ const Footer = () => {
                <div className=''>
                   <h3 className='font-bold mb-4'>Link</h3>
                   <ul>
-                     <li className='mb-2 text-gray-400'>Yacht Collections</li>
+                     <Link href={'/catalog'}>
+                        <li className='mb-2 cursor-pointer text-gray-400'>Yacht Collections</li>
+                     </Link>
                      <li className='mb-2 text-gray-400'>New Arrivals</li>
                      <li className='mb-2 text-gray-400'>Pre-Owned Selection</li>
                   </ul>
                </div>
 
-               <div>
+               {/* <div>
                   <h3 className='font-bold mb-4'>Services</h3>
                   <ul>
                      <li className='mb-2 text-gray-400'>Yacht Customization</li>
                      <li className='mb-2 text-gray-400'>Financing Options</li>
                      <li className='mb-2 text-gray-400'>Maintenance Programs</li>
                   </ul>
-               </div>
+               </div> */}
 
                {/* Right Section: Boating X Info */}
                <div>
                   <h3 className='font-bold mb-4'>Boating X Info</h3>
-                  <ul>
+                  <ul className='flex flex-col'>
                      {/* <li className='mb-2 text-gray-400'>Hurgada Marina, Red Sea, Egypt</li> */}
-                     <li className='mb-2 text-gray-400'>01227785715</li>
-                     <li className='mb-2 text-gray-400'>info@boatingx.com</li>
+                     <a href='tel: 123-456-789' className='mb-2 text-gray-400'>
+                        123-456-789
+                     </a>
+                     <a href='mailto: info@boatingx.com' className='mb-2 text-gray-400'>
+                        info@boatingx.com
+                     </a>
                   </ul>
                </div>
 
