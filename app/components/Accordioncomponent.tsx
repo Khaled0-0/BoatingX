@@ -16,14 +16,14 @@ const Accordioncomponent = () => {
             <AccordionItem value="item-1">
                <AccordionTrigger>
                   <div className='flex'>
-                     <span className='mr-3 text-2xl'>01</span>
-                     <h2 className='mb-4 text-[#0F1A2B] text-xl md:text-2xl'>
+                     <span className='mr-3 text-xl'>01</span>
+                     <h2 className='mb-4 text-[#0F1A2B] text-base md:text-2xl'>
                         What size and type of boat is right for me?
                      </h2>
                   </div>
                </AccordionTrigger>
-               <AccordionContent className='bg-gray-100 p-4'>
-                  <p className='text-[#0F1A2B] text-lg font-normal  '>
+               <AccordionContent className='p-4 bg-gray-100'>
+                  <p className='text-[#0F1A2B] text-sm md:text-lg font-normal  '>
                      We help you choose the ideal boat based on your lifestyle, usage,
                      <br />
                      passenger needs, and budget. Whether you&apos;re into leisure cruising,
@@ -36,14 +36,14 @@ const Accordioncomponent = () => {
             <AccordionItem value="item-2">
                <AccordionTrigger>
                   <div className='flex'>
-                     <span className='mr-3 text-2xl'>02</span>
-                     <h2 className='mb-4 text-[#0F1A2B] text-xl md:text-2xl'>
+                     <span className='mr-3 text-xl'>02</span>
+                     <h2 className='mb-4 text-[#0F1A2B] text-base md:text-2xl'>
                         What is included in the boat&apos;s price?
                      </h2>
                   </div>
                </AccordionTrigger>
-               <AccordionContent className='bg-gray-100 p-4'>
-                  <p className='text-[#0F1A2B] text-lg font-normal  '>
+               <AccordionContent className='p-4 bg-gray-100'>
+                  <p className='text-[#0F1A2B] text-sm md:text-lg font-normal  '>
                      Our boat prices typically include the hull, standard equipment, and
                      <br />
                      base engine(s). Additional features like electronics, trailers,
@@ -58,14 +58,14 @@ const Accordioncomponent = () => {
             <AccordionItem value="item-3">
                <AccordionTrigger>
                   <div className='flex'>
-                     <span className='mr-3 text-2xl'>03</span>
-                     <h2 className='mb-4 text-[#0F1A2B] text-xl md:text-2xl'>
+                     <span className='mr-3 text-xl'>03</span>
+                     <h2 className='mb-4 text-[#0F1A2B] text-base md:text-2xl'>
                         Do you offer after-sales service and maintenance?
                      </h2>
                   </div>
                </AccordionTrigger>
-               <AccordionContent className='bg-gray-100 p-4'>
-                  <p className='text-[#0F1A2B] text-lg font-normal  '>
+               <AccordionContent className='p-4 bg-gray-100'>
+                  <p className='text-[#0F1A2B] text-sm md:text-lg font-normal  '>
                      Yes, BoatingX provides full after-sales support including scheduled
                      <br />
                      maintenance, warranty services, spare parts, and repairs to keep
@@ -78,14 +78,14 @@ const Accordioncomponent = () => {
             <AccordionItem value="item-4">
                <AccordionTrigger>
                   <div className='flex'>
-                     <span className='mr-3 text-2xl'>04</span>
-                     <h2 className='mb-4 text-[#0F1A2B] text-xl md:text-2xl'>
+                     <span className='mr-3 text-xl'>04</span>
+                     <h2 className='mb-4 text-[#0F1A2B] text-base md:text-2xl'>
                         Can I customize my boat or add optional features?
                      </h2>
                   </div>
                </AccordionTrigger>
-               <AccordionContent className='bg-gray-100 p-4'>
-                  <p className='text-[#0F1A2B] text-lg font-normal  '>
+               <AccordionContent className='p-4 bg-gray-100'>
+                  <p className='text-[#0F1A2B] text-sm md:text-lg font-normal  '>
                      Absolutely. Most models come with a range of options including
                      <br />
                      engine upgrades, electronics packages, upholstery choices, and
@@ -98,14 +98,14 @@ const Accordioncomponent = () => {
             <AccordionItem value="item-5">
                <AccordionTrigger>
                   <div className='flex'>
-                     <span className='mr-3 text-2xl'>05</span>
-                     <h2 className='mb-4 text-[#0F1A2B] text-xl md:text-2xl'>
+                     <span className='mr-3 text-xl'>05</span>
+                     <h2 className='mb-4 text-[#0F1A2B] text-base md:text-2xl'>
                         How long does it take to receive my boat after ordering?
                      </h2>
                   </div>
                </AccordionTrigger>
-               <AccordionContent className='bg-gray-100 p-4'>
-                  <p className='text-[#0F1A2B] text-lg font-normal  '>
+               <AccordionContent className='p-4 bg-gray-100'>
+                  <p className='text-[#0F1A2B] text-sm md:text-lg font-normal  '>
                      Delivery time depends on the model, availability, and                      <br />
                      customization. On average, it can range from 8 to 16 weeks. We&apos;ll
                      <br />

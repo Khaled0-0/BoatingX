@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @custom-variant dark (&:is(.dark *));
 
 @layer utilities {
@@ -9,6 +13,19 @@
     -webkit-text-stroke: 1px gray;
   }
 }
+
+/* p style */
+p {
+  line-height: 1.5;
+  font-family: sans-serif;
+}
+
+h2,
+h3 {
+  font-family: inherit;
+  line-height: 1.5;
+}
+
 
 * {
   scroll-behavior: smooth;
@@ -97,12 +114,12 @@
     width: 100%;
     margin-top: 20px;
     /* margin-left: px; */
-    margin-bottom: -300px;
+    margin-bottom: 50px;
   }
 
   .footer__text {
     width: 100%;
-    font-size: 440px;
+    font-size: 330px;
   }
 }
 
@@ -115,12 +132,12 @@
     width: 100%;
     margin-top: 20px;
     margin-left: 20px;
-    margin-bottom: 60px;
+    margin-bottom: 115px;
   }
 
   .footer__text {
     width: 100%;
-    font-size: 310px;
+    font-size: 240px;
   }
 }
 
@@ -133,12 +150,12 @@
     width: 100%;
     margin-top: 20px;
     margin-left: 30px;
-    margin-bottom: 100px;
+    margin-bottom: 130px;
   }
 
   .footer__text {
     width: 100%;
-    font-size: 230px;
+    font-size: 180px;
   }
 }
 
@@ -155,13 +172,13 @@
   .footer__container {
     width: 100%;
     margin-top: 20px;
-    margin-left: 2px;
-    margin-bottom: -20px;
+    margin-left: 1px;
+    margin-bottom: 20px;
   }
 
   .footer__text {
     width: 100%;
-    font-size: 130px;
+    font-size: 100px;
   }
 }
 
@@ -170,12 +187,12 @@
     width: 100%;
     margin-top: 20px;
     margin-left: 3px;
-    margin-bottom: 5px;
+    margin-bottom: 30px;
   }
 
   .footer__text {
     width: 100%;
-    font-size: 115px;
+    font-size: 90px;
   }
 }
 
@@ -187,13 +204,13 @@
   .footer__container {
     width: 100%;
     margin-top: 20px;
-    margin-left: 3px;
-    margin-bottom: 15px;
+    margin-left: 8px;
+    margin-bottom: 40px;
   }
 
   .footer__text {
     width: 100%;
-    font-size: 100px;
+    font-size: 75px;
   }
 }
 
@@ -297,15 +314,6 @@
   padding: 0.25rem;
 }
 
-.embla__slide__detail_item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
 .embla__slide__detail_label {
   color: #6C757D;
   text-align: center;
@@ -327,19 +335,21 @@
   }
 
   .xl__card {
-    margin-top: 10px;
-    width: 550px;
+    width: 600px;
   }
 
 }
 
+.buttons_hover {
+  @apply cursor-pointer hover:border-[#C7AB17] hover:text-[#C7AB17] transform hover:scale-105 transition duration-400 ease-in-out hover:shadow-md hover:shadow-[#C7AB17];
+}
 
 .glass-style {
   @apply rounded-[4px] border border-[#EAEAEA4D] bg-[#49494933] backdrop-blur-[16px] p-5;
 }
 
 .button-style {
-  @apply py-3 mt-8 text-center text-lg font-bold text-white uppercase border border-white w-full cursor-pointer hover:border-[#C7AB17] hover:text-[#C7AB17] transform duration-300 ease-in-out hover:shadow-sm hover:shadow-[#C7AB17]
+  @apply w-full py-3 mt-8 text-lg font-bold text-center text-white uppercase border border-white;
 }
 
 @layer base {

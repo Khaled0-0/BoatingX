@@ -10,17 +10,17 @@ const HelpSection = () => {
                src="/assets/Foam.png"
                alt="foam texture"
                fill
-               className=" object-cover z-10 opacity-60"
+               className="z-10 object-cover opacity-60"
             />
          </div>
-         <div className='absolute z-20 inset-0 flex flex-col items-center justify-center p-3 w-full'>
-            <h2 className='text-white text-center text-3xl md:text-5xl lg:text-6xl font-medium not-italic'>
+         <div className='absolute inset-0 z-20 flex flex-col items-center justify-center w-full p-3'>
+            <h2 className='text-3xl not-italic font-medium text-center text-white md:text-4xl lg:text-5xl'>
                Still Need Help Deciding?
             </h2>
-            <p className='text-white font-normal text-base lg:text-xl mt-5 not-italic'>
+            <p className='mt-5 text-sm not-italic font-normal text-white md:text-base lg:text-xl'>
                Our Marine Specialists Guide You Personally
             </p>
-            <button className='text-white text-center text-xl font-bold border border-white px-12 py-2 cursor-pointer mt-6'>
+            <button className='py-2 mt-6 text-xl font-bold text-center text-white border border-white buttons_hover px-7 md:px-12 md:py-2'>
                contact us
             </button>
          </div>

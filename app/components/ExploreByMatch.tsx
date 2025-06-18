@@ -4,25 +4,26 @@ import { matchData } from './matchData';
 
 const ExploreByMatch = () => {
    return (
-      <section className="bg-white py-15 px-6 lg:px-15 style_lg">
+      <section className="px-5 bg-white py-15 lg:px-15 style_lg">
+
          <div className="flex flex-col items-center gap-2 mb-10 text-center">
-            <h2 className="text-[#0F1A2B] text-3xl md:text-4xl lg:text-5xl font-medium">
-               Explore Your Perfect Match
+            <h2 className="text-[#0F1A2B] md:text-4xl lg:text-5xl text-2xl font-medium">
+               Explore <span className='italic'>Your </span> Perfect Match
             </h2>
-            <p className="text-[#6C757D] text-base md:text-lg leading-6 max-w-2xl">
+            <p className="text-[#6C757D] text-sm md:text-base lg:text-lg leading-6">
                Explore what makes each brand unique
             </p>
          </div>
 
-         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:py-10">
+         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:py-10 md:justify-items-center">
             {matchData.map(({ id, logo, description, features, cta }) => (
                <article
                   key={id}
-                  className="p-5 border border-gray-200 rounded">
-                  <header className="mb-6">
-                     <Image src={logo} alt="brandq logo" width={120} height={100}
-                        className='!h-[70px]' />
-                     <p className="text-[#6C757D]  text-base md:text-lg mt-4 leading-6">
+                  className="p-5 border border-gray-200 rounded md:w-[70%] lg:w-full justify-end flex flex-col items-center md:py-8">
+                  <header className="w-full mb-6 md:flex md:flex-col md:items-start">
+                     <Image src={logo} alt="brandq logo" width={100} height={100}
+                        className='' />
+                     <p className="text-[#6C757D] text-sm md:text-base lg:text-lg mt-4 leading-6">
                         {description}
                      </p>
                   </header>
@@ -34,20 +35,22 @@ const ExploreByMatch = () => {
                               <Image
                                  src="/assets/nike-icon.svg"
                                  alt="check icon"
-                                 width={16}
-                                 height={16}
+                                 width={20}
+                                 height={20}
                               />
                            </div>
-                           <span className="text-[#0F1A2B] text-base md:text-lg font-medium">
+                           <span className="text-[#0F1A2B] text-sm md:text-base lg:text-lg font-medium">
                               {feature}
                            </span>
                         </li>
                      ))}
                   </ul>
 
-                  <button className="text-[#C7AB17] cursor-pointer border border-[#C7AB17] px-6 py-2 w-full uppercase font-bold text-xl bg-gray-200/10 hover:bg-gray-100 transition">
-                     {cta}
-                  </button>
+                  <div className='flex items-center justify-center'>
+                     <button className="text-[#C7AB17] cursor-pointer border border-[#C7AB17] px-4 py-2 uppercase font-bold text-sm md:text-xl buttons_hover">
+                        {cta}
+                     </button>
+                  </div>
                </article>
             ))}
          </div>

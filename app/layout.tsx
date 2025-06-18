@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { Crimson_Text } from "next/font/google";
+import { Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-const crimson = Crimson_Text({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-
-});
+const libre = Libre_Baskerville({
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: "BoatingX",
@@ -23,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={crimson.className}
+        className={libre.className}
       >
         <Header />
         {children}

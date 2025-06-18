@@ -4,13 +4,13 @@ import Image from 'next/image'
 const AboutHero = () => {
    return (
       <section>
-         <div className='relative h-screen w-full overflow-hidden'>
+         <div className='relative w-full h-screen overflow-hidden'>
             {/* Background Image */}
             <Image
                src="/assets/about-bg.jpg"
                alt="Boat on water"
                fill
-               className=" object-cover z-0"
+               className="z-0 object-cover "
                priority
             />
             {/* the foam */}
@@ -18,17 +18,17 @@ const AboutHero = () => {
                src="/assets/Foam.png"
                alt="foam texture"
                fill
-               className="object-cover z-10 opacity-60"
+               className="z-10 object-cover opacity-60"
             />
             {/* Dark Overlay for better text readability */}
             <div className="absolute inset-0 bg-black/20 z-15"></div>
             {/* Content */}
-            <div className="absolute z-20 inset-0 flex flex-col items-center justify-center text-white text-center px-4">
-               <div className="max-w-4xl mx-auto">
-                  <h1 className="text-6xl md:text-7xl font-light  leading-tight">
+            <div className="absolute inset-0 z-20 flex flex-col items-center justify-center px-4 text-center text-white">
+               <div className="w-full mx-5 ">
+                  <h1 className="text-4xl font-light leading-tight md:text-5xl lg:text-6xl">
                      Where Passion Meets the Sea
                   </h1>
-                  <p className="text-base md:text-2xl max-w-2xl mx-auto opacity-90 font-light">
+                  <p className="text-base font-light md:text-2xl lg:text-3xl opacity-90">
                      Egypt&apos;s premier curator of marine excellence
                   </p>
                </div>

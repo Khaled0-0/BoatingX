@@ -62,11 +62,11 @@ export function FormContact() {
 
          <Form {...form}>
 
-            <header className='flex flex-col items-center gap-3'>
-               <h2 className='text-[#0F1A2B] text-center  text-5xl font-normal'>
+            <header className='flex flex-col items-center gap-3 mx-5'>
+               <h2 className='text-[#0F1A2B] text-center md:text-4xl text-3xl lg:text-5xl font-normal'>
                   Contact Us
                </h2>
-               <p className='text-center text-[#6C757D] text-base lg:text-lg font-normal px-5'>
+               <p className='text-center text-[#6C757D] text-sm md:text-base font-normal px-5'>
                   Using the form below to contact our team directly
                </p>
             </header>
@@ -74,7 +74,7 @@ export function FormContact() {
             <form onSubmit={form.handleSubmit(onSubmit)}
                className="space-y-8 w-[83%] md:w-[70%] mt-10 ">
 
-               <div className="grid md:grid-cols-2 grid-cols-1 gap-5">
+               <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                   {/* Title */}
                   <FormField
                      control={form.control}
@@ -129,7 +129,7 @@ export function FormContact() {
                />
 
                {/* Phone Number + Preferred Contact */}
-               <div className="grid md:grid-cols-2 grid-cols-1 gap-5">
+               <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
 
                   <FormField
                      control={form.control}

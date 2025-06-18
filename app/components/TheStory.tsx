@@ -7,32 +7,35 @@ const TheStory = () => {
          <div>
 
             <div className='flex flex-col items-center gap-3 m-5'>
-               <h2 className='text-[#0F1A2B] text-center  text-5xl font-normal'>
+               <h2 className='text-[#0F1A2B] text-center text-3xl md:text-4xl lg:text-5xl font-normal'>
                   Our Story
                </h2>
-               <p className='text-center text-[#6C757D] text-lg font-normal'>
+               <p className='text-center text-[#6C757D] text-sm md:text-base lg:text-xl font-normal md:w-[70%] lg:w-full'>
                   From humble beginnings to market leadership, our journey reflects our commitment to excellence in marine luxury.
                </p>
             </div>
 
-            <div className="relative max-w-4xl mx-auto py-20 px-4">
+            <div className="relative max-w-4xl px-4 py-20 mx-auto">
                {/* Dashed Vertical Line */}
                <div className="absolute left-1/2 top-15 h-[80%] border-l border-dashed border-[#C7AB17]/70 transform -translate-x-1/2 z-0 hidden md:block" />
+
                {/* Timeline Item 1 */}
                <div className="relative flex items-center mb-24">
-                  <div className="w-1/2 pr-2 text-right  items-center gap-2 justify-end 
-                  hidden md:flex">
+                  <div className="items-center justify-end hidden w-1/2 gap-2 pr-2 text-right md:flex">
                      <p className="text-[#C7AB17] font-semibold text-lg ">2020</p>
                      <div className='border border-t border-[#C7AB17] w-12 '></div>
                   </div>
                   <div className="relative z-10 w-5 h-5 bg-[#C7AB17] rounded-full border-3 border-white hidden md:block" />
-                  <div className="md:w-1/2 md:pl-10 text-center md:text-start m-5 md:m-0">
-                     <p className="italic font-semibold">Chapter 1</p>
-                     <h3 className="font-bold text-lg mt-1">Founded in Hurghada</h3>
-                     <p className="text-sm mt-2 text-[#6C757D] md:max-w-4/5 ">
+                  <div className="m-5 text-center md:w-1/2 md:pl-10 md:text-start md:m-0">
+                     <p className="text-base italic font-semibold md:text-xl">Chapter 1</p>
+                     <h3 className="mt-1 text-lg font-bold md:text-xl lg:text-2xl">
+                        Founded in Hurghada
+                     </h3>
+                     <p className="text-xs md:text-sm lg:text-base mt-2 text-[#6C757D] 
+                     md:max-w-4/5 ">
                         We formed a passionate team of three, each bringing unique skills and perspectives that shaped our future.
                      </p>
-                     <p className="text-xs text-[#0F8B8D] mt-4 text-center md:text-start">
+                     <p className="text-xs md:text-sm text-[#0F8B8D] mt-4 text-center md:text-start">
                         ⚓ Became Egypt&apos;s first Fjord dealer
                      </p>
                   </div>
@@ -41,17 +44,20 @@ const TheStory = () => {
                {/* Timeline Item 2 */}
                <div className="relative flex items-center mb-24">
                   <div className="md:w-1/2 md:ml-10 md:max-w-[318px] lg:max-w-[382px] lg:mr- md:text-left text-center m-5 md:m-0">
-                     <p className="italic font-semibold">Chapter 2</p>
-                     <h3 className="font-bold text-lg mt-1">Mediterranean Expansion</h3>
-                     <p className="text-sm mt-2 text-[#6C757D] md:max-w-4/5">
+                     <p className="text-base italic font-semibold md:text-xl">Chapter 2</p>
+                     <h3 className="mt-1 text-lg font-bold md:text-xl lg:text-2xl">
+                        Mediterranean Expansion
+                     </h3>
+                     <p className="text-xs md:text-sm lg:text-base mt-2 text-[#6C757D] 
+                     md:max-w-4/5">
                         We&apos;ve expanded to the Mediterranean coast, opening new markets and connecting with a diverse clientele.
                      </p>
-                     <p className="text-xs text-[#0F8B8D] mt-4">
+                     <p className="text-xs md:text-sm text-[#0F8B8D] mt-4 text-center md:text-start">
                         ⚓ Won &quot;Best Marine Dealer&quot; at Dubai Boat Show
                      </p>
                   </div>
                   <div className="relative z-10 w-5 h-5 bg-[#C7AB17] rounded-full border-3 border-white hidden md:block" />
-                  <div className="w-1/2 pl-2   items-center gap-2 justify-start hidden md:flex">
+                  <div className="items-center justify-start hidden w-1/2 gap-2 pl-2 md:flex">
                      <div className='border border-t border-[#C7AB17] w-12 '></div>
                      <p className="text-[#C7AB17] font-semibold text-lg">2023</p>
                   </div>
@@ -59,11 +65,11 @@ const TheStory = () => {
 
                {/* Timeline Item 3 */}
                <div className="relative flex items-center md:mb-24">
-                  <div className="w-1/2 pr-2 text-right  items-center gap-2 justify-end hidden md:flex">
+                  <div className="items-center justify-end hidden w-1/2 gap-2 pr-2 text-right md:flex">
                      <p className="text-[#C7AB17] font-semibold text-lg ">2025</p>
                      <div className='border border-t border-[#C7AB17] w-12 '></div>
                   </div>
-                  <div className="relative w-5 h-5 z-10 hidden md:block">
+                  <div className="relative z-10 hidden w-5 h-5 md:block">
                      {/* Yellow Circle */}
                      <div className="w-full h-full bg-[#C7AB17] rounded-full border-[5px] border-white" />
                      {/* Boat Icon Positioned on Top */}
@@ -76,13 +82,16 @@ const TheStory = () => {
                      />
                   </div>
 
-                  <div className="md:w-1/2 md:pl-10 text-center md:text-start m-5 md:m-0">
-                     <p className="italic font-semibold">Chapter 3</p>
-                     <h3 className="font-bold text-lg mt-1">Market Leadership</h3>
-                     <p className="text-sm mt-2 text-[#6C757D] md:max-w-4/5">
+                  <div className="m-5 text-center md:w-1/2 md:pl-10 md:text-start md:m-0">
+                     <p className="text-base italic font-semibold md:text-xl">Chapter 3</p>
+                     <h3 className="mt-1 text-lg font-bold md:text-xl lg:text-2xl">
+                        Market Leadership
+                     </h3>
+                     <p className="text-xs md:text-sm lg:text-base mt-2 text-[#6C757D] 
+                     md:max-w-4/5">
                         Delivered over fifty luxury yachts in Egypt, enhancing Mediterranean adventures with top-notch amenities for unforgettable journeys.
                      </p>
-                     <p className="text-xs text-[#0F8B8D] mt-4">
+                     <p className="text-xs md:text-sm text-[#0F8B8D] mt-4 text-center md:text-start">
                         ⚓ Added Nordkapp & Fjord to our portfolio
                      </p>
                   </div>

@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const WhoWeAre = () => {
    return (
-      <section className='mt-20 relative md:h-[900px] h-[650px] sm:h-[700px] xs:h-[550px] '>
+      <section className='mt-20  relative md:h-[900px] h-[900px] sm:h-[900px] xs:h-[950px] '>
          {/* Container for Background Image */}
          <div className="absolute inset-0 w-full h-full">
             {/* Desktop - Full Image */}
@@ -19,7 +19,7 @@ const WhoWeAre = () => {
             </div>
 
             {/* Mobile - Right Half of Image */}
-            <div className="block xs:block sm:hidden overflow-hidden h-full">
+            <div className="block h-full overflow-hidden xs:block sm:hidden">
                <div className="w-[200%] h-full ml-[-50%]">
                   <Image
                      src={"/assets/wb.png"}
@@ -37,7 +37,7 @@ const WhoWeAre = () => {
             src="/assets/Foam.png"
             alt="foam texture"
             fill
-            className="object-cover z-10"
+            className="z-10 object-cover"
          />
 
          {/* Content */}
@@ -46,19 +46,20 @@ const WhoWeAre = () => {
                <Image src={'/assets/white-logo.svg'} alt='logo' width={130} height={100} className='xs:w-[60px] xs:h-[60px]' />
             </div>
 
-            <div className='flex flex-col md:flex-row md:items-end md:justify-between w-full gap-6 
-            '>
-               <h2 className='text-white text-4xl md:text-6xl font-normal text-start md:text-center  mt-25 md:mt-0'>
+            <div className='flex flex-col w-full gap-6 lg:flex-row lg:items-end md:flex md:items-start md:justify-between '>
+
+               <h2 className='mt-20 text-4xl font-normal text-white md:text-6xl text-start md:text-center md:mt-0'>
                   Who We Are
                </h2>
 
-               <div className='md:max-w-[50%] text-left flex flex-col gap-6'>
-                  <p className='text-white text-ld md:text-xl font-normal leading-6 md:leading-7 '>
-                     Founded by a group of passionate entrepreneurs with decades of experience in boating, media, and business, we came together with a shared vision — to transform how people in Egypt experience life at sea.
+               <div className='lg:max-w-[50%] text-left flex flex-col gap-6'>
+                  <p className='text-base font-normal leading-6 text-white md:text-xl md:leading-7 '>
+                     Founded by Mark Richard in 1995, Palm Beach Motor Yachts is a World celebrated, award-winning boat builder of downeast- style luxury motor yachts. We proudly offer an impressive portfolio of 34 model variations, ranging in size from 42 feet to 107 feet across our Classic, GT, and GTRS model ranges.
+                     Each of our luxury motor yacht models is frawlasley crafted from the ground up, delivering performance, impressive range, and supreme fuel efficiency for a yachting experience unlike any other. Our meticulous dedication to quality reflects our unwavering commitment to safeguarding your investment in our motor yachts, ensuring that every moment of your yachting journey is truly exceptional.
                   </p>
 
                   <Link href={'/about'}>
-                     <button className='text-white border border-white text-sm md:text-lg font-normal py-2 px-4 max-w-[150px] cursor-pointer'>
+                     <button className='text-white border border-white text-sm md:text-lg font-normal py-2 px-4 max-w-[150px] buttons_hover'>
                         ABOUT US
                      </button>
                   </Link>
