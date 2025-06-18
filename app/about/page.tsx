@@ -2,7 +2,7 @@ import React from 'react'
 import AboutHero from '../components/AboutHero'
 import TheStory from '../components/TheStory'
 import TheDifference from '../components/TheDifference'
-import OurTeam from '../components/OurTeam'
+// import OurTeam from '../components/OurTeam'
 
 const About = () => {
    return (
@@ -10,7 +10,7 @@ const About = () => {
          <AboutHero />
          <TheStory />
          <TheDifference />
-         <OurTeam />
+         {/* <OurTeam /> */}
       </section>
    )
 }

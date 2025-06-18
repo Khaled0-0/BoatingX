@@ -105,6 +105,20 @@ h3 {
 }
 
 /* Media Queries */
+@media (min-width: 1440px) {
+  .footer__container {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: -10px;
+    margin-bottom: 30px;
+  }
+
+  .footer__text {
+    width: 100%;
+    font-size: 350px;
+  }
+}
+
 @media (max-width: 1440px) {
   .embla {
     --slide-size: 35%;
@@ -113,13 +127,13 @@ h3 {
   .footer__container {
     width: 100%;
     margin-top: 20px;
-    /* margin-left: px; */
+    margin-left: -20px;
     margin-bottom: 50px;
   }
 
   .footer__text {
     width: 100%;
-    font-size: 330px;
+    font-size: 350px;
   }
 }
 

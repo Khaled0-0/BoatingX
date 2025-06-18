@@ -39,7 +39,7 @@ const ExploreByMatch = () => {
                                  height={20}
                               />
                            </div>
-                           <span className="text-[#0F1A2B] text-sm md:text-base lg:text-lg font-medium">
+                           <span className="text-sm font-medium text-[#0F1A2B] d:text-base lg:text-lg">
                               {feature}
                            </span>
                         </li>

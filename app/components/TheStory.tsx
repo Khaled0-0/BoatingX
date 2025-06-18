@@ -8,10 +8,10 @@ const TheStory = () => {
 
             <div className='flex flex-col items-center gap-3 m-5'>
                <h2 className='text-[#0F1A2B] text-center text-3xl md:text-4xl lg:text-5xl font-normal'>
-                  Our Story
+                  Our mission is simple
                </h2>
                <p className='text-center text-[#6C757D] text-sm md:text-base lg:text-xl font-normal md:w-[70%] lg:w-full'>
-                  From humble beginnings to market leadership, our journey reflects our commitment to excellence in marine luxury.
+                  To redefine boating in Egypt through design, performance, and unforgettable experiences.
                </p>
             </div>
 

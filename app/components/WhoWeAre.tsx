@@ -54,8 +54,10 @@ const WhoWeAre = () => {
 
                <div className='lg:max-w-[50%] text-left flex flex-col gap-6'>
                   <p className='text-base font-normal leading-6 text-white md:text-xl md:leading-7 '>
-                     Founded by Mark Richard in 1995, Palm Beach Motor Yachts is a World celebrated, award-winning boat builder of downeast- style luxury motor yachts. We proudly offer an impressive portfolio of 34 model variations, ranging in size from 42 feet to 107 feet across our Classic, GT, and GTRS model ranges.
-                     Each of our luxury motor yacht models is frawlasley crafted from the ground up, delivering performance, impressive range, and supreme fuel efficiency for a yachting experience unlike any other. Our meticulous dedication to quality reflects our unwavering commitment to safeguarding your investment in our motor yachts, ensuring that every moment of your yachting journey is truly exceptional.
+                     We are the exclusive dealer of Nordkapp and Fjord boats in Egypt — bringing cutting-edge Scandinavian and German craftsmanship to the Red Sea.
+                     Founded by a team of entrepreneurs with deep roots in boating, media, and business, we&apos;re on a mission to elevate the boating experience in Egypt with world-class design, performance, and service.
+                     At BoatingX , we don&apos;t just sell boats — we help you live the boating lifestyle. From your first inquiry to after-sales support, we&apos;re with you every step of the way.
+                     Explore. Cruise. Wander.
                   </p>
 
                   <Link href={'/about'}>

@@ -1,28 +1,29 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Image from 'next/image';
 import { SelectableDropdown } from './ui/SelectableDropdown';
 import { SlideData } from './embla/EmblaCarousel';
 
-const options = {
-   RIB: [
-      { label: 'Airborne', value: 'airborne' },
-   ],
-   Bow_Rider: [
-      { label: 'Avant', value: 'avant' },
-   ],
-   Center_console: [
-      { label: 'Enduro', value: 'enduro' },
-   ],
-   Day_Cruiser: [
-      { label: 'Noblese', value: 'noblese' },
-   ],
-   Wheelhouse: [
-      { label: 'Coupe', value: 'coupe' },
-   ],
-   Luxury_day_cruisers: [
-      { label: 'All Fjord', value: 'all-fjord' },
-   ],
+const getPriceNumber = (price: string) => {
+   const match = price.replace(/,/g, '').match(/\d+/g);
+   return match ? parseInt(match[0], 10) : 0;
+};
+
+const getBrandFromTitle = (title: string) => {
+   return title.split(' ')[0];
+};
+
+const getModelFromTitle = (title: string) => {
+   const parts = title.split(' ');
+   return parts.length > 2 ? parts.slice(1, 3).join(' ') : title;
+};
+
+const getPriceRange = (price: number) => {
+   if (price < 50000) return '0 - 50K €';
+   if (price < 100000) return '50K - 100K €';
+   if (price < 150000) return '100K - 150K €';
+   if (price < 200000) return '150K - 200K €';
+   return '200K - 250K €';
 };
 
 interface CategoryProps {
@@ -32,13 +33,27 @@ interface CategoryProps {
 
 const Category = ({ products, setFilteredProducts }: CategoryProps) => {
    const [selectedValues, setSelectedValues] = useState({
-      RIB: '',
-      Bow_Rider: '',
-      Center_Console: '',
-      Day_Cruiser: '',
-      Wheelhouse: '',
-      Luxury_day_cruisers: '',
+      Brands: '',
+      Models: '',
+      Price_range: '',
    });
+
+   // Memoize options to avoid recalculating on every render
+   const brands = useMemo(() =>
+      Array.from(new Set(products.map(p => getBrandFromTitle(p.title))))
+         .map(b => ({ label: b, value: b })),
+      [products]
+   );
+   const models = useMemo(() =>
+      Array.from(new Set(products.map(p => getModelFromTitle(p.title))))
+         .map(m => ({ label: m, value: m })),
+      [products]
+   );
+   const priceRanges = useMemo(() =>
+      Array.from(new Set(products.map(p => getPriceRange(getPriceNumber(p.price)))))
+         .map(pr => ({ label: pr, value: pr })),
+      [products]
+   );
 
    const handleChange = (key: keyof typeof selectedValues, value: string) => {
       setSelectedValues((prev) => ({ ...prev, [key]: value }));
@@ -50,12 +65,9 @@ const Category = ({ products, setFilteredProducts }: CategoryProps) => {
 
    const handleClearAll = () => {
       setSelectedValues({
-         RIB: '',
-         Bow_Rider: '',
-         Center_Console: '',
-         Day_Cruiser: '',
-         Wheelhouse: '',
-         Luxury_day_cruisers: '',
+         Brands: '',
+         Models: '',
+         Price_range: '',
       });
    };
 
@@ -63,16 +75,20 @@ const Category = ({ products, setFilteredProducts }: CategoryProps) => {
       const applyFilters = () => {
          let currentFilteredProducts = products;
 
-         if (selectedValues.Luxury_day_cruisers === 'all-fjord') {
-            currentFilteredProducts = products;
-         } else {
-            Object.entries(selectedValues).forEach(([, selectedValue]) => {
-               if (selectedValue) {
-                  currentFilteredProducts = currentFilteredProducts.filter((product) =>
-                     product.title.toLowerCase().includes(selectedValue.toLowerCase())
-                  );
-               }
-            });
+         if (selectedValues.Brands) {
+            currentFilteredProducts = currentFilteredProducts.filter((product) =>
+               getBrandFromTitle(product.title) === selectedValues.Brands
+            );
+         }
+         if (selectedValues.Models) {
+            currentFilteredProducts = currentFilteredProducts.filter((product) =>
+               getModelFromTitle(product.title) === selectedValues.Models
+            );
+         }
+         if (selectedValues.Price_range) {
+            currentFilteredProducts = currentFilteredProducts.filter((product) =>
+               getPriceRange(getPriceNumber(product.price)) === selectedValues.Price_range
+            );
          }
 
          setFilteredProducts(currentFilteredProducts);
@@ -84,57 +100,38 @@ const Category = ({ products, setFilteredProducts }: CategoryProps) => {
    return (
       <section>
 
-         <div className='grid grid-cols-2 gap-5 m-5 md:mx-10 lg:mx-15 md:grid-cols-4 lg:grid-cols-8 justify-items-center lg:justify-items-start lg:gap-0 selectable__style'>
-            <SelectableDropdown
-               label="RIB"
-               placeholder="RIB"
-               value={selectedValues.RIB}
-               onChange={(val) => handleChange('RIB', val)}
-               options={options.RIB}
-            />
-            <SelectableDropdown
-               label="Bow Rider"
-               placeholder="Bow Rider"
-               value={selectedValues.Bow_Rider}
-               onChange={(val) => handleChange('Bow_Rider', val)}
-               options={options.Bow_Rider}
-            />
-            <SelectableDropdown
-               label="Center Console"
-               placeholder="Center Console"
-               value={selectedValues.Center_Console}
-               onChange={(val) => handleChange('Center_Console', val)}
-               options={options.Center_console}
-            />
-            <SelectableDropdown
-               label="Day Cruiser"
-               placeholder="Day Cruiser"
-               value={selectedValues.Day_Cruiser}
-               onChange={(val) => handleChange('Day_Cruiser', val)}
-               options={options.Day_Cruiser}
-            />
-            <SelectableDropdown
-               label="Wheelhouse"
-               placeholder="Wheelhouse"
-               value={selectedValues.Wheelhouse}
-               onChange={(val) => handleChange('Wheelhouse', val)}
-               options={options.Wheelhouse}
-            />
-            <SelectableDropdown
-               className='md:w-fit'
-               label="Luxury Day Cruisers"
-               placeholder="Luxury Day Cruisers"
-               value={selectedValues.Luxury_day_cruisers}
-               onChange={(val) => handleChange('Luxury_day_cruisers', val)}
-               options={options.Luxury_day_cruisers}
-            />
+         <div className="flex gap-4 px-5 py-2 overflow-x-auto md:px-10 scrollbar-hide">
+            <div className="flex gap-4 flex-nowrap">
+               <SelectableDropdown
+                  label="Brands"
+                  placeholder="Brands"
+                  value={selectedValues.Brands}
+                  onChange={(val) => handleChange('Brands', val)}
+                  options={brands}
+               />
+               <SelectableDropdown
+                  label="Models"
+                  placeholder="Models"
+                  value={selectedValues.Models}
+                  onChange={(val) => handleChange('Models', val)}
+                  options={models}
+               />
+               <SelectableDropdown
+                  label="Price range"
+                  placeholder="Price range"
+                  value={selectedValues.Price_range}
+                  onChange={(val) => handleChange('Price_range', val)}
+                  options={priceRanges}
+               />
+            </div>
          </div>
 
-         <div className='md:mt-5 lg:ml-20  mx-5 md:ml-8 w-[90%] md:max-w-fit flex flex-col md:flex-row  gap-2 items-center md:items-center justify-center'
+
+         <div className='flex flex-col-reverse items-start justify-start gap-4 m-5 md:flex-row md:items-center md:ml-10'
          >
 
             {Object.values(selectedValues).some(val => val) && (
-               <div className='flex gap-2'>
+               <div className='flex gap-2 '>
                   <button
                      onClick={handleClearAll}
                      className='text-[#C7AB17] text-sm font-semibold not-italic cursor-pointer 
@@ -146,19 +143,19 @@ const Category = ({ products, setFilteredProducts }: CategoryProps) => {
                </div>
             )}
 
-            <div className='grid grid-cols-2 gap-5 md:gap-2 md:grid-cols-6 w-fit h-fit'>
+            <div className='flex flex-wrap gap-2 md:gap-4'>
                {Object.entries(selectedValues).map(([key, val]) =>
                   val ? (
                      <div
                         key={key}
-                        className='flex items-center justify-around gap-2 p-2 border border-gray-200 text- focus:outline-none focus:ring-2 focus:ring-gray-200/50'
+                        className='flex items-center justify-between gap-3 px-3 py-1 border border-[#C7AB17] focus:outline-none focus:ring-2 focus:ring-gray-200/50'
                         tabIndex={0}
                         onKeyDown={(e) => {
                            if (e.key === 'Backspace' || e.key === 'Delete') {
                               handleClear(key as keyof typeof selectedValues);
                            }
                         }}>
-                        <p className='text-lg font-medium'>{val}</p>
+                        <p className='text-sm font-normal text-gray-600'>{val}</p>
                         <Image
                            onClick={() => handleClear(key as keyof typeof selectedValues)}
                            className='cursor-pointer hover:bg-red-500 hover:rounded-full '
@@ -171,6 +168,8 @@ const Category = ({ products, setFilteredProducts }: CategoryProps) => {
                   ) : null
                )}
             </div>
+
+
          </div>
       </section >
    );
