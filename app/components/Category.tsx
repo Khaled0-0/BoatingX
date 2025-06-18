@@ -84,8 +84,7 @@ const Category = ({ products, setFilteredProducts }: CategoryProps) => {
    return (
       <section>
 
-         <div className=' md:mx-10 lg:mx-15 m-5 gap-5 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8
-         justify-items-center lg:justify-items-start lg:gap-0 selectable__style'>
+         <div className='grid grid-cols-2 gap-5 m-5 md:mx-10 lg:mx-15 md:grid-cols-4 lg:grid-cols-8 justify-items-center lg:justify-items-start lg:gap-0 selectable__style'>
             <SelectableDropdown
                label="RIB"
                placeholder="RIB"
@@ -131,24 +130,28 @@ const Category = ({ products, setFilteredProducts }: CategoryProps) => {
             />
          </div>
 
-         <div className='md:mt-5 lg:ml-20  mx-5 md:ml-8 w-[90%] md:max-w-fit flex flex-col md:flex-row  gap-2 items-center md:items-center justify-center'>
-            <div className='flex gap-2'>
-               <button
-                  onClick={handleClearAll}
-                  className='text-[#C7AB17] text-sm font-semibold not-italic cursor-pointer 
-               hover:text-[#C7AB17]/60 '
-               >
-                  CLEAR
-               </button>
-               <div className='border-1 border-gray-200 h-[16px] '></div>
-            </div>
+         <div className='md:mt-5 lg:ml-20  mx-5 md:ml-8 w-[90%] md:max-w-fit flex flex-col md:flex-row  gap-2 items-center md:items-center justify-center'
+         >
+
+            {Object.values(selectedValues).some(val => val) && (
+               <div className='flex gap-2'>
+                  <button
+                     onClick={handleClearAll}
+                     className='text-[#C7AB17] text-sm font-semibold not-italic cursor-pointer 
+                  hover:text-[#C7AB17]/60 '
+                  >
+                     CLEAR
+                  </button>
+                  <div className='border-1 border-gray-200 h-[16px] '></div>
+               </div>
+            )}
 
             <div className='grid grid-cols-2 gap-5 md:gap-2 md:grid-cols-6 w-fit h-fit'>
                {Object.entries(selectedValues).map(([key, val]) =>
                   val ? (
                      <div
                         key={key}
-                        className='border-gray-200 border p-2  text- flex gap-2 items-center focus:outline-none focus:ring-2 focus:ring-gray-200/50 justify-around'
+                        className='flex items-center justify-around gap-2 p-2 border border-gray-200 text- focus:outline-none focus:ring-2 focus:ring-gray-200/50'
                         tabIndex={0}
                         onKeyDown={(e) => {
                            if (e.key === 'Backspace' || e.key === 'Delete') {

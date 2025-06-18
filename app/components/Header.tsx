@@ -68,7 +68,7 @@ const Header = () => {
          </div>
 
          {/* Desktop Navigation */}
-         <nav className="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wider">
+         <nav className="items-center hidden gap-8 text-sm font-medium tracking-wider lg:flex">
             {links.map(link => {
                const isActive = pathname === link.path;
                const baseColor = forceScrolled || isScrolled ? 'black' : 'white';
@@ -99,8 +99,8 @@ const Header = () => {
             <Link href='/contact-us'>
                <button
                   className={`px-6 py-2 border cursor-pointer transition-all duration-300 text-lg font-medium tracking-wide ${forceScrolled || isScrolled
-                     ? 'border-black text-black hover:bg-black hover:text-white'
-                     : 'border-white text-white hover:bg-white hover:text-black'
+                     ? 'buttons_hover text-black'
+                     : 'buttons_hover text-white'
                      }`}
                >
                   Contact Us
