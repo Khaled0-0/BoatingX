@@ -4,7 +4,7 @@ import { discoverData } from './discover-data';
 
 const Discover = () => {
    return (
-      <section className="relative h-[260vh] md:h-[185vh] lg:h-[120vh] w-full overflow-hidden screen__xl ">
+      <section className="relative h-[250vh] md:h-[185vh] lg:h-[120vh] w-full overflow-hidden screen__xl ">
 
          {/* Background Image */}
          <Image
@@ -33,13 +33,13 @@ const Discover = () => {
             </p>
          </div>
 
-         <div className='absolute flex flex-col items-center justify-start w-full gap-10 px-5 transform -translate-x-1/2 -translate-y-1/2 lg:gap-5 top-3/5 left-1/2 lg:flex-row md:justify-center lg:mt-0 '>
+         <div className='absolute flex flex-col items-center justify-start w-full gap-10 px-5 transform -translate-x-1/2 -translate-y-1/2 pb-30 md:pb-0 lg:gap-5 top-3/5 left-1/2 lg:flex-row md:justify-center lg:mt-0'>
 
             {discoverData.map((section, sectionIndex) => (
-               <div key={sectionIndex} className="glass-style w-full md:w-[600px] lg:w-[500px] xl__card ">
+               <div key={sectionIndex} className="glass-style w-full md:w-[600px] lg:w-[500px] xl__card">
                   <div className='flex flex-col items-center gap-4'>
                      <Image src={section.logo} alt='logo' width={170} height={32} />
-                     <p className='text-lg not-italic font-normal text-white'>
+                     <p className='text-base not-italic font-normal text-white md:text-lg'>
                         {section.title}
                      </p>
                   </div>
