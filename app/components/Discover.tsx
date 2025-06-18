@@ -33,7 +33,7 @@ const Discover = () => {
             </p>
          </div>
 
-         <div className='absolute flex flex-col items-center justify-start w-full gap-10 px-5 transform -translate-x-1/2 -translate-y-1/2 pb-60  lg:gap-5 top-3/5 left-1/2 lg:flex-row md:justify-center lg:mt-0 md:pb-[-40px] lg:pb-10'>
+         <div className='absolute flex flex-col items-center justify-start w-full gap-10 px-5 transform -translate-x-1/2 -translate-y-1/2 pb-60  lg:gap-5 top-3/5 left-1/2 lg:flex-row md:justify-center lg:mt-0 md:pb-[150px] lg:pb-10'>
 
             {discoverData.map((section, sectionIndex) => (
                <div key={sectionIndex} className="glass-style w-full md:w-[600px] lg:w-[500px] xl__card">
