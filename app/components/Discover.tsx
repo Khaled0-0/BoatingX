@@ -4,7 +4,7 @@ import { discoverData } from './discover-data';
 
 const Discover = () => {
    return (
-      <section className="relative h-[250vh] md:h-[185vh] lg:h-[120vh] w-full overflow-hidden screen__xl ">
+      <section className="relative h-[230vh] md:h-[185vh] lg:h-[120vh] w-full overflow-hidden screen__xl ">
 
          {/* Background Image */}
          <Image
@@ -23,7 +23,7 @@ const Discover = () => {
             className="object-cover "
          />
 
-         <div className='absolute w-full not-italic text-center text-white mt-35 lg:mt-30'>
+         <div className='absolute w-full not-italic text-center text-white mt-18 lg:mt-30'>
 
             <h1 className='m-4 text-xl not-italic font-medium md:text-3xl lg:text-4xl'>
                Discover Two Amazing Yacht Experiences
