@@ -47,7 +47,7 @@ const Header = () => {
 
    return (
       <header
-         className={`fixed top-0 z-50 w-full flex items-center justify-between px-3 md:px-8 py-4 transition-all duration-500 border-b ${forceScrolled
+         className={`fixed top-0 z-50 w-full flex items-center justify-between p-5 md:px-8  transition-all duration-500 border-b ${forceScrolled
             ? 'bg-white/95 backdrop-blur-md border-b-gray-200'
             : isScrolled
                ? 'bg-white/95 backdrop-blur-md border-b-white'
