@@ -33,7 +33,7 @@ const Discover = () => {
             </p>
          </div>
 
-         <div className='absolute flex flex-col items-center justify-start w-full gap-10 px-5 transform -translate-x-1/2 -translate-y-1/2 pb-60  lg:gap-5 top-3/5 left-1/2 lg:flex-row md:justify-center lg:mt-0 md:pb-[150px] lg:pb-10'>
+         <div className='absolute flex flex-col items-center justify-start w-full gap-10 px-5 transform -translate-x-1/2 -translate-y-1/2 pb-60  lg:gap-5 top-3/5 left-1/2 lg:flex-row md:justify-center lg:mt-5 md:pb-[150px] lg:pb-10'>
 
             {discoverData.map((section, sectionIndex) => (
                <div key={sectionIndex} className="glass-style w-full md:w-[600px] lg:w-[500px] xl__card">
@@ -44,25 +44,25 @@ const Discover = () => {
                      </p>
                   </div>
 
-                  {/* Map over boats and group in pairs for display */}
+                  {/* Map over boats and group */}
                   {section.boats.map((boat, boatIndex) => {
                      if (boatIndex % 2 === 0) {
                         const nextBoat = section.boats[boatIndex + 1];
                         return (
                            <div key={boatIndex} className='flex flex-col items-center justify-between gap-5 md:flex-row pt-7'>
-                              {/* First boat in the pair */}
-                              <div className='flex items-center justify-between w-full gap-2 '>
+                              {/* First boat */}
+                              <div className='flex items-center justify-around w-full gap-2 '>
                                  <Image src={boat.image} alt='logo' width={120} height={45}
                                     className='lg:w-[100px]' />
-                                 <p className='text-sm not-italic font-semibold text-white lg:text-base text-start'>
+                                 <p className='text-sm not-italic font-semibold text-white lg:text-sm text-start'>
                                     {boat.name}
                                  </p>
                               </div>
-                              {/* Second boat in the pair (if exists) */}
+                              {/* Second boat  */}
                               {nextBoat && (
-                                 <div className='flex items-center justify-between w-full gap-2'>
+                                 <div className='flex items-center justify-around w-full gap-2'>
                                     <Image src={nextBoat.image} alt='logo' width={120} height={45} className='lg:w-[100px]' />
-                                    <p className='text-sm not-italic font-semibold text-white lg:text-base'>
+                                    <p className='text-sm not-italic font-semibold text-white lg:text-sm'>
                                        {nextBoat.name}
                                     </p>
                                  </div>

@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Script from "next/script";
 import Analytics from "./components/Analytics";
+import { Suspense } from "react";
 
 const libre = Libre_Baskerville({
   weight: ['400', '700'],
@@ -40,7 +41,9 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={libre.className}>
-        <Analytics />
+        <Suspense>
+          <Analytics />
+        </Suspense>
         <Header />
         {children}
         <Footer />
