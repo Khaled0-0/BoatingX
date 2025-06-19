@@ -3,6 +3,8 @@ import { Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Script from "next/script";
+import Analytics from "./components/Analytics";
 
 const libre = Libre_Baskerville({
   weight: ['400', '700'],
@@ -23,12 +25,34 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={libre.className}
-      >
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-3V5KXKCXN2"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-3V5KXKCXN2');
+          `}
+        </Script>
+      </head>
+      <body className={libre.className}>
+        <Analytics />
         <Header />
         {children}
         <Footer />
+        <Script id="clarity-init" strategy="afterInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "s1wxq6h8el");
+          `}
+        </Script>
       </body>
     </html>
   );
