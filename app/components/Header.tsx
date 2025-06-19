@@ -19,7 +19,7 @@ const links = [
    { name: 'HOME', path: '/' },
    { name: 'BRANDS & MODELS', path: '/brand' },
    // { name: 'ABOUT', path: '/about' },
-   { name: 'CATEGORY', path: '/catalog' },
+   { name: 'BOATS', path: '/catalog' },
 ]
 
 const Header = () => {
@@ -103,7 +103,7 @@ const Header = () => {
                      : 'buttons_hover text-white'
                      }`}
                >
-                  Contact Us
+                  CONTACT US
                </button>
             </Link>
          </div>
@@ -133,7 +133,7 @@ const Header = () => {
                         </div>
                      </DrawerClose>
                   </DrawerHeader>
-                  <div className="flex flex-col items-center gap-4 py-4">
+                  <div className="flex flex-col items-start gap-4 p-4">
                      {links.map(link => {
                         const isActive = pathname === link.path;
                         const colorClass = forceScrolled || isScrolled ? 'text-black' : 'text-gray-700';

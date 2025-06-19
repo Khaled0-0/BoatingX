@@ -6,14 +6,15 @@ import { whyChooseUsData } from './whychoseusdata'
 
 const WhyChooseUs = () => {
    return (
-      <section className='px-5 my-20 '>
+      <section className='px-2 my-20 '>
 
          <div className='flex flex-col items-center gap-3 md:px-0'>
             <h2 className='text-[#0F1A2B] text-center text-xl  md:text-5xl font-semibold'>
                Why Choose BoatingX?
             </h2>
-            <p className='text-center text-[#6C757D] text-lg md:text-lg font-normal'>
-               Discover the entire Explore our exceptional new range of boats!</p>
+            {/* <p className='text-center text-[#6C757D] text-lg md:text-lg font-normal'>
+               Discover the entire Explore our exceptional new range of boats!
+            </p> */}
          </div>
 
          <div className='flex flex-col gap-5 m-2 mt-8 lg:flex-row md:mt-10 md:mx-10'>

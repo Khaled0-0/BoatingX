@@ -4,7 +4,7 @@ export const whyChooseUsData = [
       src: '/assets/Trophy.svg',
       alt: 'trophy',
       h2_text: 'Exclusive access to limited-edition yachts',
-      p_text: 'We collaborate with leading brands like Sunseeker and Beneteau to offer you the latest models with full warranties.',
+      p_text: 'We collaborate with leading brands like Nordkapp and Fjord to offer you the latest models with full warranties.',
    },
    {
       id: 2,

@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Hero = () => {
    return (
@@ -40,15 +41,19 @@ const Hero = () => {
 
                {/* Action Buttons */}
                <div className="flex flex-col items-center justify-center w-full gap-5 sm:flex-row md:w-[80%]">
-
-                  <button className="w-full p-2 text-xl font-medium tracking-wider text-white transition-all duration-300 border-2 border-white md:w-[80%] buttons_hover">
-                     Explore Brands
-                  </button>
-                  <button className="w-full p-2 text-xl font-medium tracking-wider text-white transition-all duration-300 border-2 border-white buttons_hover">
-                     Book a Consultation
-                  </button>
-
+                  <Link href="/brand">
+                     <button className="w-full px-10 py-3 text-lg font-bold tracking-wider text-white transition-all duration-300 bg-transparent border border-white backdrop-blur-xs lg:px-5 buttons_hover">
+                        Explore Brands
+                     </button>
+                  </Link>
+                  <Link href="/contact-us">
+                     <button className="w-full px-4 py-3 text-lg font-bold tracking-wider text-white transition-all duration-300 bg-transparent border border-white backdrop-blur-xs buttons_hover">
+                        Book a Consultation
+                     </button>
+                  </Link>
                </div>
+
+
             </div>
          </div>
 

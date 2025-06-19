@@ -57,6 +57,8 @@ const WhoWeAre = () => {
                      We are the exclusive dealer of Nordkapp and Fjord boats in Egypt — bringing cutting-edge Scandinavian and German craftsmanship to the Red Sea.
                      Founded by a team of entrepreneurs with deep roots in boating, media, and business, we&apos;re on a mission to elevate the boating experience in Egypt with world-class design, performance, and service.
                      At BoatingX , we don&apos;t just sell boats — we help you live the boating lifestyle. From your first inquiry to after-sales support, we&apos;re with you every step of the way.
+                     <br />
+                     <br />
                      Explore. Cruise. Wander.
                   </p>
 

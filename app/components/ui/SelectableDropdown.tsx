@@ -1,5 +1,6 @@
 // components/ui/SelectableDropdown.tsx
 'use client';
+import React from 'react';
 import {
    Select,
    SelectContent,

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import { featuredBoats } from './featuredboatsdata'
+import Link from 'next/link'
 
 const FeaturedBoats = () => {
    return (
@@ -69,9 +70,11 @@ const FeaturedBoats = () => {
             ))}
          </div>
 
-         <div className='flex justify-center'>
-            <button className='text-[#C7AB17] text-center text-xl font-bold  border border-[#C7AB17] px-8 py-2 buttons_hover '>View All Brands</button>
-         </div>
+         <Link href="/catalog">
+            <div className='flex justify-center'>
+               <button className='text-[#C7AB17] text-center text-xl font-bold  border border-[#C7AB17] px-8 py-2 buttons_hover '>View All Boats</button>
+            </div>
+         </Link>
       </section>
    )
 }

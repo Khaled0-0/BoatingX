@@ -29,19 +29,23 @@ const getPriceRange = (price: number) => {
 interface CategoryProps {
    products: SlideData[];
    setFilteredProducts: React.Dispatch<React.SetStateAction<SlideData[]>>;
+   initialBrand?: string;
 }
 
-const Category = ({ products, setFilteredProducts }: CategoryProps) => {
+const Category = ({ products, setFilteredProducts, initialBrand = '' }: CategoryProps) => {
    const [selectedValues, setSelectedValues] = useState({
-      Brands: '',
+      Brands: initialBrand,
       Models: '',
       Price_range: '',
    });
 
    // Memoize options to avoid recalculating on every render
    const brands = useMemo(() =>
-      Array.from(new Set(products.map(p => getBrandFromTitle(p.title))))
-         .map(b => ({ label: b, value: b })),
+      [
+         { label: 'All', value: 'all' },
+         ...Array.from(new Set(products.map(p => getBrandFromTitle(p.title))))
+            .map(b => ({ label: b, value: b }))
+      ],
       [products]
    );
    const models = useMemo(() =>
@@ -75,7 +79,7 @@ const Category = ({ products, setFilteredProducts }: CategoryProps) => {
       const applyFilters = () => {
          let currentFilteredProducts = products;
 
-         if (selectedValues.Brands) {
+         if (selectedValues.Brands && selectedValues.Brands !== 'all') {
             currentFilteredProducts = currentFilteredProducts.filter((product) =>
                getBrandFromTitle(product.title) === selectedValues.Brands
             );
